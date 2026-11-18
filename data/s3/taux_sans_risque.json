@@ -1,0 +1,11 @@
+{
+  "taux_simple_annuel": 0.07,
+  "taux_continu_annuel_utilise": 0.067659,
+  "reference": "TMM octobre 2026 (BCT), égal au taux directeur BCT 7,00 %",
+  "sources": [
+    "https://www.lapresse.tn/2026/11/02/bct-le-tmm-demeure-stable-au-niveau-de-7-en-octobre-2026/",
+    "https://www.leconomistemaghrebin.com/2026/11/02/le-tmm-maintenu-a-7-en-octobre-2026/",
+    "https://businessnews.com.tn/2026/10/07/la-bct-maintient-son-taux-directeur-a-7-2/1421819/"
+  ],
+  "date_reference": "2026-11-03"
+}

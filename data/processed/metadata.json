@@ -1,0 +1,12 @@
+{
+  "date_extraction_donnees": "2026-11-04",
+  "derniere_seance": "2026-11-03",
+  "premiere_seance": "2023-01-02",
+  "nb_seances": 960,
+  "titres_dans_les_sources": 85,
+  "titres_cotes": 75,
+  "titres_retenus": 57,
+  "seuil_liquidite": 0.6,
+  "historique_min_ans": 2,
+  "nb_ost_detectees": 228
+}

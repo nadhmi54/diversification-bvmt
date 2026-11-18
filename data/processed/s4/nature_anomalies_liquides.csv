@@ -1,0 +1,11 @@
+ticker,nom,nb_signalements_sur_12,stable,signale_5pct_espaces,rendement,volatilite,part_seances_echangees,part_rendements_nuls,nature,justification
+AB,AMEN BANK,9,True,"7F, ACP",0.475152900930555,0.1687358234875808,0.9927,0.171,performance extrême,"liquide (99%) ; extrêmes : skewness +3.0σ, CVaR +2.0σ"
+SOTET,SOTETEL,8,True,"RV, ACP",0.5943700383890542,0.3212245336778935,0.9875,0.1564,performance extrême (hausse),liquide (99%) ; extrêmes : rendement +2.2σ
+WIFAK,WIFACK INT BANK,8,True,"7F, ACP",-0.0149988135378816,0.1861551889031213,0.6896,0.6142,artefact d'illiquidité,"échangé 69% des séances, 61% de rendements nuls ; extrêmes : kurtosis +2.4σ"
+BHL,BH LEASING,6,False,RV,0.2149277237328836,0.4120441875716822,0.6937,0.4234,performance extrême,"liquide (69%) ; extrêmes : volatilité +2.2σ, VaR −2.1σ"
+CELL,CELLCOM,5,False,,-0.2294326143089197,0.3827935834805364,0.6937,0.3525,performance extrême (baisse),liquide (69%) ; extrêmes : rendement −2.2σ
+SCB,CIMENTS DE BIZERTE,4,False,RV,-0.2643248471554612,0.3849927165289356,0.6531,0.4411,performance extrême (baisse),liquide (65%) ; extrêmes : rendement −2.4σ
+BIAT,BIAT,3,False,7F,0.2552850112398326,0.1585283519248466,1.0,0.1449,performance extrême,liquide (100%) ; extrêmes : bêta +2.3σ
+TAIR,TUNISAIR,2,False,,-0.0872760442395182,0.2862849171929722,0.8958,0.562,artefact d'illiquidité,"échangé 90% des séances, 56% de rendements nuls"
+NBL,NEW BODY LINE,2,False,,-0.1446296376713159,0.2482724134967355,0.8385,0.3921,atypique modéré,"liquide (84%) ; aucune feature à |z| > 2, isolé par une combinaison de features"
+BTE,BTE (ADP),1,False,,-0.0325165102576713,0.4011082252605233,0.6906,0.3952,performance extrême,"liquide (69%) ; extrêmes : volatilité +2.1σ, VaR −2.1σ"

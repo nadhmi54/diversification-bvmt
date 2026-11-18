@@ -1,0 +1,4 @@
+espace,k_retenu,criteres_en_faveur,vote_coude,vote_silhouette,vote_calinski_harabasz,vote_davies_bouldin,silhouette,tailles,alertes
+RV,8,"silhouette, calinski_harabasz, davies_bouldin",5,8,8,8,0.441,22 / 13 / 11 / 9 / 8 / 7 / 3 / 2,"k = 8 AU BORD de la plage 3-8 ; silhouette 0.44 < 0,5 : structure faible"
+7F,3,"silhouette, calinski_harabasz, davies_bouldin",5,3,3,3,0.406,48 / 26 / 1,"k = 3 AU BORD de la plage 3-8 ; 1 cluster(s) d'un seul titre ; silhouette 0.41 < 0,5 : structure faible"
+ACP,3,"silhouette, davies_bouldin",5,3,8,3,0.469,47 / 27 / 1,"k = 3 AU BORD de la plage 3-8 ; 1 cluster(s) d'un seul titre ; silhouette 0.47 < 0,5 : structure faible"

@@ -1,0 +1,229 @@
+date,isin,ticker,nom,cloture_veille,reference,facteur,type,detail,source
+2023-04-26,TN0001400704,SPDIT,SPDIT - SICAF,8.37,7.67,0.91636798088411,dividende probable,écart 0.700 DT (8.4%),bvmt.com.tn histo_cotation_2023.zip
+2023-04-27,TN0001600154,TJARI,ATTIJARI BANK,43.2,39.2,0.9074074074074074,dividende probable,écart 4.000 DT (9.3%),bvmt.com.tn histo_cotation_2023.zip
+2023-04-27,TN0004200853,CIL,CIL,26.5,24.3,0.9169811320754717,dividende probable,écart 2.200 DT (8.3%),bvmt.com.tn histo_cotation_2023.zip
+2023-05-04,TN0001000108,MNP,MONOPRIX,5.92,5.83,0.9847972972972974,dividende probable,écart 0.090 DT (1.5%),bvmt.com.tn histo_cotation_2023.zip
+2023-05-05,TN0006550016,BHASS,BH ASSURANCE,50.0,48.75,0.975,dividende probable,écart 1.250 DT (2.5%),bvmt.com.tn histo_cotation_2023.zip
+2023-05-09,TN0002200053,BT,BT,5.24,4.96,0.9465648854961831,dividende probable,écart 0.280 DT (5.3%),bvmt.com.tn histo_cotation_2023.zip
+2023-05-09,TN0002400505,UBCI,UBCI,22.9,21.65,0.9454148471615721,dividende probable,écart 1.250 DT (5.5%),bvmt.com.tn histo_cotation_2023.zip
+2023-05-10,TN0001900604,BH,BH BANK,14.38,13.48,0.9374130737134909,dividende probable,écart 0.900 DT (6.3%),bvmt.com.tn histo_cotation_2023.zip
+2023-05-15,TN0001800457,BIAT,BIAT,96.0,90.2,0.9395833333333333,dividende probable,écart 5.800 DT (6.0%),bvmt.com.tn histo_cotation_2023.zip
+2023-05-15,TN0004200853,CIL,CIL,26.5,18.93,0.7143396226415094,division / attribution probable,facteur 0.7143,bvmt.com.tn histo_cotation_2023.zip
+2023-05-18,TN0003400058,AB,AMEN BANK,35.8,33.75,0.9427374301675978,dividende probable,écart 2.050 DT (5.7%),bvmt.com.tn histo_cotation_2023.zip
+2023-05-19,TN0007380017,TRE,TUNIS RE,6.5,6.1,0.9384615384615385,dividende probable,écart 0.400 DT (6.2%),bvmt.com.tn histo_cotation_2023.zip
+2023-05-22,TN0002100907,TLS,TUNISIE LEASING F,10.87,10.02,0.921803127874885,dividende probable,écart 0.850 DT (7.8%),bvmt.com.tn histo_cotation_2023.zip
+2023-05-25,TN0006610018,TJL,ATTIJARI LEASING,17.25,15.75,0.9130434782608695,dividende probable,écart 1.500 DT (8.7%),bvmt.com.tn histo_cotation_2023.zip
+2023-05-29,TN0007310139,HL,HANNIBAL LEASE,4.88,4.58,0.9385245901639344,dividende probable,écart 0.300 DT (6.1%),bvmt.com.tn histo_cotation_2023.zip
+2023-05-31,TN0001100254,SFBT,SFBT,14.52,13.78,0.9490358126721763,dividende probable,écart 0.740 DT (5.1%),bvmt.com.tn histo_cotation_2023.zip
+2023-06-01,TN0007830011,ASSMA,ASSUR MAGHREBIA,56.0,53.66,0.9582142857142857,dividende probable,écart 2.340 DT (4.2%),bvmt.com.tn histo_cotation_2023.zip
+2023-06-01,TNDKJ8O68X14,AMV,ASSU MAGHREBIA VIE,6.86,6.57,0.9577259475218659,dividende probable,écart 0.290 DT (4.2%),bvmt.com.tn histo_cotation_2023.zip
+2023-06-05,TN0003900107,UIB,UIB,27.6,26.8,0.9710144927536232,dividende probable,écart 0.800 DT (2.9%),bvmt.com.tn histo_cotation_2023.zip
+2023-06-05,TNNGTFLC2986,STA,STA,25.95,23.65,0.9113680154142582,dividende probable,écart 2.300 DT (8.9%),bvmt.com.tn histo_cotation_2023.zip
+2023-06-07,TNQPQXRODTH8,SMART,SMART TUNISIE,23.53,18.19,0.7730556736081599,attribution gratuite,SMART DA1/5 070623 : 1 nouvelle(s) pour 5 anciennes (f théorique 0.8333) + autre ajustement (nominal/dividende),bvmt.com.tn histo_cotation_2023.zip
+2023-06-09,TN0006060016,STAR,STAR,166.01,159.79,0.9625323775676164,dividende probable,écart 6.220 DT (3.7%),bvmt.com.tn histo_cotation_2023.zip
+2023-06-09,TN0007440019,TLNET,TELNET HOLDING,7.36,6.81,0.9252717391304347,dividende probable,écart 0.550 DT (7.5%),bvmt.com.tn histo_cotation_2023.zip
+2023-06-12,TN0004100202,TINV,TUNINVEST-SICAR,8.3,7.8,0.9397590361445782,dividende probable,écart 0.500 DT (6.0%),bvmt.com.tn histo_cotation_2023.zip
+2023-06-12,TN0007530017,OTH,ONE TECH HOLDING,8.13,7.96,0.9790897908979089,dividende probable,écart 0.170 DT (2.1%),bvmt.com.tn histo_cotation_2023.zip
+2023-06-15,TN0004700100,ATL,ATL,4.0,3.73,0.9325,dividende probable,écart 0.270 DT (6.8%),bvmt.com.tn histo_cotation_2023.zip
+2023-06-27,TN0003000452,AST,ASTREE,47.42,45.42,0.9578237030788697,dividende probable,écart 2.000 DT (4.2%),bvmt.com.tn histo_cotation_2023.zip
+2023-06-30,TN0007410012,NAKL,ENNAKL AUTOMOBILES,11.78,11.13,0.9448217317487267,dividende probable,écart 0.650 DT (5.5%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-03,TN0007610017,SAH,SAH,9.9,9.57,0.9666666666666667,dividende probable,écart 0.330 DT (3.3%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-04,TN0003200755,ICF,ICF,98.0,90.5,0.923469387755102,dividende probable,écart 7.500 DT (7.7%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-06,TN0006580013,MGR,SOTUMAG,5.18,4.76,0.918918918918919,dividende probable,écart 0.420 DT (8.1%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-10,TN0001500859,,AMS,0.95,0.85,0.8947368421052632,dividende probable,écart 0.100 DT (10.5%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-10,TN0006650014,,ELECTROSTAR,0.43,0.36,0.8372093023255813,dividende probable,écart 0.070 DT (16.3%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-10,TN0007130016,,GIF-FILTER,0.53,0.4,0.7547169811320755,dividende probable,écart 0.130 DT (24.5%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-10,TN0007690019,UADH,UADH,0.43,0.35,0.813953488372093,dividende probable,écart 0.080 DT (18.6%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-11,TN0002500650,PLTU,PLAC. TSIE-SICAF,42.1,39.6,0.9406175771971497,dividende probable,écart 2.500 DT (5.9%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-11,TN0005700018,PGH,POULINA GP HOLDING,7.48,7.25,0.9692513368983957,dividende probable,écart 0.230 DT (3.1%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-11,TN0007580012,BL,BEST LEASE,2.28,2.15,0.9429824561403509,dividende probable,écart 0.130 DT (5.7%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-12,TN0002300358,AL,AIR LIQUIDE TSIE,91.99,86.49,0.9402108924883139,dividende probable,écart 5.500 DT (6.0%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-12,TN0003100609,BNA,BNA,8.55,7.75,0.9064327485380116,dividende probable,écart 0.800 DT (9.4%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-13,TN0007620016,MPBS,MPBS,4.4,4.18,0.9499999999999998,dividende probable,écart 0.220 DT (5.0%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-17,TN0007550015,CITY,CITY CARS,13.8,12.55,0.9094202898550725,dividende probable,écart 1.250 DT (9.1%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-18,TN0007270010,TPR,TPR,5.42,5.07,0.9354243542435425,dividende probable,écart 0.350 DT (6.5%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-18,TN0007670011,DH,DELICE HOLDING,13.39,12.99,0.9701269604182226,dividende probable,écart 0.400 DT (3.0%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-20,TN0006560015,SOTUV,SOTUVER,13.26,12.71,0.9585218702865762,dividende probable,écart 0.550 DT (4.1%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-20,TN0007570013,ECYCL,EURO-CYCLES,17.25,16.25,0.9420289855072463,dividende probable,écart 1.000 DT (5.8%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-24,TN0006660013,STPIL,SOTRAPIL,15.01,13.66,0.9100599600266489,dividende probable,écart 1.350 DT (9.0%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-27,TN0006590012,SIAME,SIAME,3.7,3.63,0.981081081081081,dividende probable,écart 0.070 DT (1.9%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-27,TN0007210016,SOKNA,ESSOUKNA,1.66,1.56,0.9397590361445783,dividende,dividende 0.100 DT (bulletin),bvmt.com.tn histo_cotation_2023.zip
+2023-07-31,TN0007720014,UMED,UNIMED,8.22,7.75,0.9428223844282237,dividende probable,écart 0.470 DT (5.7%),bvmt.com.tn histo_cotation_2023.zip
+2023-07-31,TN0007740012,SAM,ATELIER MEUBLE INT,4.1,3.7,0.902439024390244,dividende probable,écart 0.400 DT (9.8%),bvmt.com.tn histo_cotation_2023.zip
+2023-08-01,TN0007610017,SAH,SAH,8.97,8.72,0.972129319955407,attribution gratuite,SAH DA 1/35 010823 : 1 nouvelle(s) pour 35 anciennes (f théorique 0.9722),bvmt.com.tn histo_cotation_2023.zip
+2023-08-18,TN0007300015,ARTES,ARTES,7.24,6.24,0.861878453038674,dividende probable,écart 1.000 DT (13.8%),bvmt.com.tn histo_cotation_2023.zip
+2023-08-25,TN0006650014,,ELECTROSTAR,0.36,0.43,1.1944444444444444,ajustement à la hausse (reprise de cotation ?),facteur 1.1944,bvmt.com.tn histo_cotation_2023.zip
+2023-08-25,TN0007130016,,GIF-FILTER,0.4,0.53,1.325,ajustement à la hausse (reprise de cotation ?),facteur 1.3250,bvmt.com.tn histo_cotation_2023.zip
+2023-08-25,TN0007690019,UADH,UADH,0.35,0.43,1.2285714285714286,ajustement à la hausse (reprise de cotation ?),facteur 1.2286,bvmt.com.tn histo_cotation_2023.zip
+2023-09-20,TN0007540016,NBL,NEW BODY LINE,5.16,4.86,0.9418604651162791,dividende probable,écart 0.300 DT (5.8%),bvmt.com.tn histo_cotation_2023.zip
+2023-10-09,TN0007290018,,SOPAT,2.03,2.05,1.0098522167487685,ajustement à la hausse (reprise de cotation ?),facteur 1.0099,bvmt.com.tn histo_cotation_2023.zip
+2023-10-12,TN0003400058,AB,AMEN BANK,39.0,34.13,0.8751282051282052,dividende probable,écart 4.870 DT (12.5%),bvmt.com.tn histo_cotation_2023.zip
+2024-01-02,TN0007630015,STPAP,SOTIPAPIER,5.63,5.16,0.91651865008881,dividende probable,écart 0.470 DT (8.3%),bvmt.com.tn histo_cotation_2024.zip
+2024-04-15,TN0001400704,SPDIT,SPDIT - SICAF,10.85,10.0,0.9216589861751152,dividende probable,écart 0.850 DT (7.8%),bvmt.com.tn histo_cotation_2024.zip
+2024-04-17,TN0001600154,TJARI,ATTIJARI BANK,51.89,47.39,0.9132780882636347,dividende probable,écart 4.500 DT (8.7%),bvmt.com.tn histo_cotation_2024.zip
+2024-04-25,TN0004200853,CIL,CIL,22.4,20.4,0.9107142857142857,dividende probable,écart 2.000 DT (8.9%),bvmt.com.tn histo_cotation_2024.zip
+2024-05-02,TN0006550016,BHASS,BH ASSURANCE,48.75,47.25,0.9692307692307692,dividende probable,écart 1.500 DT (3.1%),bvmt.com.tn histo_cotation_2024.zip
+2024-05-07,TN0002200053,BT,BT,5.3,5.01,0.9452830188679245,dividende probable,écart 0.290 DT (5.5%),bvmt.com.tn histo_cotation_2024.zip
+2024-05-07,TN0002400505,UBCI,UBCI,23.6,22.35,0.9470338983050848,dividende probable,écart 1.250 DT (5.3%),bvmt.com.tn histo_cotation_2024.zip
+2024-05-10,TN0001900604,BH,BH BANK,14.15,13.05,0.9222614840989399,dividende probable,écart 1.100 DT (7.8%),bvmt.com.tn histo_cotation_2024.zip
+2024-05-13,TN0001800457,BIAT,BIAT,95.8,89.8,0.9373695198329853,dividende probable,écart 6.000 DT (6.3%),bvmt.com.tn histo_cotation_2024.zip
+2024-05-14,TN0003400058,AB,AMEN BANK,39.96,36.74,0.9194194194194194,dividende probable,écart 3.220 DT (8.1%),bvmt.com.tn histo_cotation_2024.zip
+2024-05-17,TN0002100907,TLS,TUNISIE LEASING F,15.3,14.2,0.9281045751633986,dividende probable,écart 1.100 DT (7.2%),bvmt.com.tn histo_cotation_2024.zip
+2024-05-22,TN0006060016,STAR,STAR,149.0,142.57,0.9568456375838925,dividende probable,écart 6.430 DT (4.3%),bvmt.com.tn histo_cotation_2024.zip
+2024-05-23,TN0006610018,TJL,ATTIJARI LEASING,19.15,17.65,0.9216710182767623,dividende probable,écart 1.500 DT (7.8%),bvmt.com.tn histo_cotation_2024.zip
+2024-05-24,TN0007380017,TRE,TUNIS RE,6.88,6.43,0.934593023255814,dividende probable,écart 0.450 DT (6.5%),bvmt.com.tn histo_cotation_2024.zip
+2024-05-28,TN0001100254,SFBT,SFBT,14.46,13.35,0.9232365145228215,attribution gratuite,SFBT DA1/12 280524 : 1 nouvelle(s) pour 12 anciennes (f théorique 0.9231),bvmt.com.tn histo_cotation_2024.zip
+2024-05-28,TN0007310139,HL,HANNIBAL LEASE,5.7,5.3,0.9298245614035087,dividende probable,écart 0.400 DT (7.0%),bvmt.com.tn histo_cotation_2024.zip
+2024-05-29,TN0007530017,OTH,ONE TECH HOLDING,8.05,7.8,0.9689440993788819,dividende probable,écart 0.250 DT (3.1%),bvmt.com.tn histo_cotation_2024.zip
+2024-05-31,TN0001100254,SFBT,SFBT,13.45,12.71,0.9449814126394053,dividende probable,écart 0.740 DT (5.5%),bvmt.com.tn histo_cotation_2024.zip
+2024-06-03,TN0003900107,UIB,UIB,24.0,23.15,0.9645833333333332,dividende probable,écart 0.850 DT (3.5%),bvmt.com.tn histo_cotation_2024.zip
+2024-06-07,TN0002500650,PLTU,PLAC. TSIE-SICAF,48.51,46.01,0.9484642341785199,dividende probable,écart 2.500 DT (5.2%),bvmt.com.tn histo_cotation_2024.zip
+2024-06-12,TNQPQXRODTH8,SMART,SMART TUNISIE,16.71,15.66,0.9371633752244165,dividende probable,écart 1.050 DT (6.3%),bvmt.com.tn histo_cotation_2024.zip
+2024-06-20,TN0004700100,ATL,ATL,3.92,3.62,0.9234693877551021,dividende probable,écart 0.300 DT (7.7%),bvmt.com.tn histo_cotation_2024.zip
+2024-06-20,TN0007270010,TPR,TPR,5.8,5.4,0.9310344827586208,dividende probable,écart 0.400 DT (6.9%),bvmt.com.tn histo_cotation_2024.zip
+2024-06-28,TN0005700018,PGH,POULINA GP HOLDING,9.13,8.77,0.9605695509309966,dividende probable,écart 0.360 DT (3.9%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-01,TN0003000452,AST,ASTREE,50.0,47.8,0.956,dividende probable,écart 2.200 DT (4.4%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-02,TN0003100609,BNA,BNA,8.99,8.09,0.8998887652947719,dividende probable,écart 0.900 DT (10.0%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-02,TN0006580013,MGR,SOTUMAG,6.45,5.93,0.9193798449612403,dividende probable,écart 0.520 DT (8.1%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-05,TN0003200755,ICF,ICF,68.0,65.5,0.9632352941176471,dividende probable,écart 2.500 DT (3.7%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-05,TN0007830011,ASSMA,ASSUR MAGHREBIA,49.0,45.9,0.936734693877551,dividende probable,écart 3.100 DT (6.3%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-05,TNDKJ8O68X14,AMV,ASSU MAGHREBIA VIE,5.8,5.48,0.9448275862068967,dividende probable,écart 0.320 DT (5.5%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-08,TN0002300358,AL,AIR LIQUIDE TSIE,89.5,83.2,0.929608938547486,dividende probable,écart 6.300 DT (7.0%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-08,TN0007550015,CITY,CITY CARS,13.39,12.14,0.9066467513069455,dividende probable,écart 1.250 DT (9.3%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-08,TN0007610017,SAH,SAH,9.1,8.75,0.9615384615384616,dividende probable,écart 0.350 DT (3.8%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-10,TN0007410012,NAKL,ENNAKL AUTOMOBILES,10.89,10.19,0.9357208448117538,dividende probable,écart 0.700 DT (6.4%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-11,TN0007620016,MPBS,MPBS,7.37,7.17,0.9728629579375848,dividende probable,écart 0.200 DT (2.7%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-15,TN0006660013,STPIL,SOTRAPIL,15.8,14.4,0.9113924050632911,dividende probable,écart 1.400 DT (8.9%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-15,TN0007300015,ARTES,ARTES,6.52,6.02,0.9233128834355828,dividende probable,écart 0.500 DT (7.7%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-15,TN0007580012,BL,BEST LEASE,2.2,2.06,0.9363636363636363,dividende probable,écart 0.140 DT (6.4%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-17,TN0007670011,DH,DELICE HOLDING,14.01,13.41,0.9571734475374732,dividende probable,écart 0.600 DT (4.3%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-24,TN0004100202,TINV,TUNINVEST-SICAR,9.78,9.28,0.9488752556237219,dividende probable,écart 0.500 DT (5.1%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-24,TNNGTFLC2986,STA,STA,19.3,18.3,0.9481865284974094,dividende probable,écart 1.000 DT (5.2%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-26,TN0006560015,SOTUV,SOTUVER,12.5,11.95,0.956,dividende probable,écart 0.550 DT (4.4%),bvmt.com.tn histo_cotation_2024.zip
+2024-07-31,TN0007740012,SAM,ATELIER MEUBLE INT,6.38,5.88,0.9216300940438872,dividende probable,écart 0.500 DT (7.8%),bvmt.com.tn histo_cotation_2024.zip
+2024-08-05,TN0007440019,TLNET,TELNET HOLDING,5.56,5.31,0.9550359712230215,dividende probable,écart 0.250 DT (4.5%),bvmt.com.tn histo_cotation_2024.zip
+2024-08-15,TN0006590012,SIAME,SIAME,3.6,3.48,0.9666666666666667,dividende probable,écart 0.120 DT (3.3%),bvmt.com.tn histo_cotation_2024.zip
+2024-09-05,TN0007570013,ECYCL,EURO-CYCLES,13.79,13.49,0.9782451051486585,dividende probable,écart 0.300 DT (2.2%),bvmt.com.tn histo_cotation_2024.zip
+2024-09-09,TN0001000108,MNP,MONOPRIX,4.15,4.05,0.9759036144578312,dividende probable,écart 0.100 DT (2.4%),bvmt.com.tn histo_cotation_2024.zip
+2024-09-20,TN0006530018,SOTET,SOTETEL,6.5,6.0,0.9230769230769231,dividende probable,écart 0.500 DT (7.7%),bvmt.com.tn histo_cotation_2024.zip
+2024-09-26,TN0007540016,NBL,NEW BODY LINE,4.97,4.67,0.9396378269617707,dividende,dividende 0.300 DT (bulletin),bvmt.com.tn histo_cotation_2024.zip
+2024-10-28,TN0003400058,AB,AMEN BANK,43.45,37.66,0.8667433831990793,attribution gratuite,AB DA 2/13 281024 : 2 nouvelle(s) pour 13 anciennes (f théorique 0.8667),bvmt.com.tn histo_cotation_2024.zip
+2024-11-11,TNQPQXRODTH8,SMART,SMART TUNISIE,16.6,14.23,0.8572289156626506,attribution gratuite,SMART DA1/6 111124 : 1 nouvelle(s) pour 6 anciennes (f théorique 0.8571),bvmt.com.tn histo_cotation_2024.zip
+2024-11-29,TN0001800457,BIAT,BIAT,105.0,91.88,0.875047619047619,attribution gratuite,BIAT DA1/7 291124 : 1 nouvelle(s) pour 7 anciennes (f théorique 0.8750),bvmt.com.tn histo_cotation_2024.zip
+2025-01-03,TN0007630015,STPAP,SOTIPAPIER,5.42,5.1,0.9409594095940959,dividende,dividende 0.320 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-04-08,TN0001600154,TJARI,ATTIJARI BANK,73.5,68.5,0.9319727891156463,dividende,dividende 5.000 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-04-18,TN0001400704,SPDIT,SPDIT - SICAF,13.0,12.0,0.9230769230769231,dividende,dividende 1.000 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-04-28,TN0004200853,CIL,CIL,26.5,24.3,0.9169811320754717,dividende,dividende 2.200 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-04-28,TN0006610018,TJL,ATTIJARI LEASING,28.12,26.12,0.9288762446657184,dividende,dividende 2.000 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-04-30,TN0001600154,TJARI,ATTIJARI BANK,70.25,59.01,0.84,attribution gratuite,TJARIDA4/21 300425 : 4 nouvelle(s) pour 21 anciennes (f théorique 0.8400),bvmt.com.tn histo_cotation_2025.zip
+2025-05-07,TN0002200053,BT,BT,5.34,4.99,0.9344569288389514,dividende,dividende 0.350 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-05-07,TN0002400505,UBCI,UBCI,20.0,18.75,0.9375,dividende,dividende 1.250 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-05-07,TN0006550016,BHASS,BH ASSURANCE,65.52,64.02,0.9771062271062271,dividende,dividende 1.500 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-05-12,TN0001800457,BIAT,BIAT,103.45,97.45,0.9420009666505558,dividende,dividende 6.000 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-05-12,TN0001900604,BH,BH BANK,10.25,9.85,0.9609756097560975,dividende,dividende 0.400 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-05-14,TN0002500650,PLTU,PLAC. TSIE-SICAF,45.0,42.0,0.9333333333333333,dividende,dividende 3.000 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-05-15,TN0006060016,STAR,STAR,202.0,193.6,0.9584158415841584,dividende,dividende 8.397 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-05-16,TN0007380017,TRE,TUNIS RE,8.4,7.92,0.9428571428571428,dividende,dividende 0.480 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-05-20,TN0002100907,TLS,TUNISIE LEASING F,19.85,18.7,0.942065491183879,dividende,dividende 1.150 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-05-20,TN0003400058,AB,AMEN BANK,41.6,38.3,0.9206730769230769,dividende,dividende 3.300 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-05-20,TNNGTFLC2986,STA,STA,23.95,24.4,1.0187891440501045,ajustement à la hausse (reprise de cotation ?),facteur 1.0188,bvmt.com.tn histo_cotation_2025.zip
+2025-05-28,TN0007310139,HL,HANNIBAL LEASE,7.45,7.0,0.9395973154362416,dividende,dividende 0.450 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-05-30,TN0001100254,SFBT,SFBT,12.5,11.7,0.9359999999999999,dividende,dividende 0.800 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-06-02,TN0003900107,UIB,UIB,23.6,22.75,0.9639830508474576,dividende,dividende 0.850 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-06-03,TN0007410012,NAKL,ENNAKL AUTOMOBILES,12.43,11.55,0.929203539823009,dividende,dividende 0.880 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-06-10,TN0007300015,ARTES,ARTES,11.0,10.2,0.9272727272727272,dividende,dividende 0.800 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-06-13,TN0007530017,OTH,ONE TECH HOLDING,9.5,9.24,0.9726315789473684,dividende,dividende 0.260 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-06-17,TN0003100609,BNA,BNA,9.18,8.18,0.8910675381263616,dividende,dividende 1.000 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-06-19,TNQPQXRODTH8,SMART,SMART TUNISIE,13.45,12.55,0.9330855018587362,dividende,dividende 0.900 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-06-20,TN0004700100,ATL,ATL,5.89,5.54,0.9405772495755519,dividende,dividende 0.350 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-06-20,TN0006580013,MGR,SOTUMAG,6.82,6.34,0.9296187683284457,dividende,dividende 0.480 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-06-23,TN0007580012,BL,BEST LEASE,2.34,2.19,0.9358974358974359,dividende,dividende 0.150 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-06-23,TN0007610017,SAH,SAH,12.84,12.44,0.9688473520249221,dividende,dividende 0.400 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-06-25,TNNGTFLC2986,STA,STA,24.2,22.16,0.915702479338843,dividende,dividende 2.040 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-01,TN0003000452,AST,ASTREE,46.85,44.35,0.9466382070437567,dividende,dividende 2.500 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-04,TN0007550015,CITY,CITY CARS,16.73,15.48,0.9252839210998207,dividende,dividende 1.250 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-07,TN0007830011,ASSMA,ASSUR MAGHREBIA,51.51,48.36,0.9388468258590565,dividende,dividende 3.150 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-07,TNDKJ8O68X14,AMV,ASSU MAGHREBIA VIE,5.95,5.59,0.9394957983193277,dividende,dividende 0.363 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-09,TN0003200755,ICF,ICF,115.49,107.79,0.9333275608277773,dividende,dividende 7.700 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-10,TN0007620016,MPBS,MPBS,13.75,13.38,0.9730909090909091,dividende,dividende 0.370 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-11,TN0005700018,PGH,POULINA GP HOLDING,16.19,15.74,0.9722050648548486,dividende,dividende 0.450 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-15,TN0002300358,AL,AIR LIQUIDE TSIE,125.0,117.5,0.94,dividende,dividende 7.500 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-15,TN0007620016,MPBS,MPBS,13.99,7.0,0.5003573981415297,division / attribution probable,facteur 0.5004,bvmt.com.tn histo_cotation_2025.zip
+2025-07-16,TN0007270010,TPR,TPR,10.93,10.48,0.958828911253431,dividende,dividende 0.450 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-17,TN0007670011,DH,DELICE HOLDING,25.43,24.43,0.9606763664962642,dividende,dividende 1.000 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-21,TN0007510019,LNDOR,LAND OR,10.58,10.18,0.9621928166351607,dividende,dividende 0.400 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-24,TN0006560015,SOTUV,SOTUVER,13.08,12.83,0.9808868501529052,dividende,dividende 0.250 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-29,TN0004100202,TINV,TUNINVEST-SICAR,8.6,8.1,0.9418604651162791,dividende,dividende 0.500 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-07-31,TN0006660013,STPIL,SOTRAPIL,24.0,22.4,0.9333333333333332,dividende,dividende 1.600 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-08-01,TN0007670011,DH,DELICE HOLDING,28.39,14.2,0.5001761183515322,division / attribution probable,facteur 0.5002,bvmt.com.tn histo_cotation_2025.zip
+2025-08-07,TN0007180011,SITS,SITS,2.25,3.0,1.3333333333333333,ajustement à la hausse (reprise de cotation ?),facteur 1.3333,bvmt.com.tn histo_cotation_2025.zip
+2025-08-14,TN0007680010,BNASS,BNA ASSURANCES,3.69,3.48,0.943089430894309,dividende probable,écart 0.210 DT (5.7%),bvmt.com.tn histo_cotation_2025.zip
+2025-08-15,TN0007440019,TLNET,TELNET HOLDING,7.2,6.85,0.9513888888888888,dividende,dividende 0.350 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-08-15,TN0007570013,ECYCL,EURO-CYCLES,13.39,12.79,0.9551904406273337,dividende,dividende 0.600 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-08-20,TN0006590012,SIAME,SIAME,2.44,2.26,0.9262295081967212,dividende,dividende 0.180 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-08-26,TN0007720014,UMED,UNIMED,9.1,8.53,0.9373626373626374,dividende,dividende 0.570 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-08-29,TN0007740012,SAM,ATELIER MEUBLE INT,6.75,6.3,0.9333333333333333,dividende,dividende 0.450 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-09-10,TN0001000108,MNP,MONOPRIX,6.22,6.07,0.9758842443729905,dividende,dividende 0.150 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-09-15,TN0006530018,SOTET,SOTETEL,5.7,5.2,0.9122807017543859,dividende,dividende 0.500 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-09-16,TN0007700016,PLAST,OFFICEPLAST,2.19,2.15,0.9817351598173516,dividende,dividende 0.040 DT (bulletin),bvmt.com.tn histo_cotation_2025.zip
+2025-11-24,TN0007740012,SAM,ATELIER MEUBLE INT,5.6,5.12,0.9142857142857144,attribution gratuite,SAM DA 8/85 241125 : 8 nouvelle(s) pour 85 anciennes (f théorique 0.9140),bvmt.com.tn histo_cotation_2025.zip
+2025-12-22,TN0006060016,STAR,STAR,242.42,55.94,0.2307565382394192,attribution gratuite,STAR DA 7/6 221225 : 7 nouvelle(s) pour 6 anciennes (f théorique 0.4615) + autre ajustement (nominal/dividende),bvmt.com.tn histo_cotation_2025.zip
+2026-04-17,TN0001600154,TJARI,ATTIJARI BANK,74.95,70.75,0.9439626417611741,dividende,dividende 4.200 DT (bulletin),Bulletin officiel BVMT Bull20260417.pdf
+2026-04-22,TN0004200853,CIL,CIL,35.9,33.5,0.9331476323119777,dividende,dividende 2.400 DT (bulletin),Bulletin officiel BVMT Bull20260422.pdf
+2026-04-28,TN0001400704,SPDIT,SPDIT - SICAF,14.37,13.37,0.930410577592206,dividende,dividende 1.000 DT (bulletin),Bulletin officiel BVMT Bull20260428.pdf
+2026-05-05,TN0002400505,UBCI,UBCI,37.1,35.8,0.9649595687331535,dividende,dividende 1.300 DT (bulletin),Bulletin officiel BVMT Bull20260505.pdf
+2026-05-11,TN0002200053,BT,BT,7.17,6.82,0.9511854951185496,dividende,dividende 0.350 DT (bulletin),Bulletin officiel BVMT Bull20260511.pdf
+2026-05-12,TN0001800457,BIAT,BIAT,160.0,154.0,0.9625,dividende,dividende 6.000 DT (bulletin),Bulletin officiel BVMT Bull20260512.pdf
+2026-05-12,TN0002500650,PLTU,PLAC. TSIE-SICAF,41.81,38.61,0.9234632862951446,dividende,dividende 3.200 DT (bulletin),Bulletin officiel BVMT Bull20260512.pdf
+2026-05-12,TN0006550016,BHASS,BH ASSURANCE,65.5,63.9,0.9755725190839695,dividende,dividende 1.600 DT (bulletin),Bulletin officiel BVMT Bull20260512.pdf
+2026-05-15,TN0007380017,TRE,TUNIS RE,12.96,12.41,0.9575617283950617,dividende,dividende 0.550 DT (bulletin),Bulletin officiel BVMT Bull20260515.pdf
+2026-05-20,TN0002100907,TLS,TUNISIE LEASING F,40.42,38.82,0.9604156358238496,dividende,dividende 1.600 DT (bulletin),Bulletin officiel BVMT Bull20260520.pdf
+2026-05-21,TN0006720049,BHL,BH LEASING,4.4,4.3,0.9772727272727272,dividende,dividende 0.100 DT (bulletin),Bulletin officiel BVMT Bull20260521.pdf
+2026-05-22,TN0006610018,TJL,ATTIJARI LEASING,39.0,36.8,0.9435897435897436,dividende,dividende 2.200 DT (bulletin),Bulletin officiel BVMT Bull20260522.pdf
+2026-05-26,TN0007310139,HL,HANNIBAL LEASE,8.11,7.66,0.9445129469790383,dividende,dividende 0.450 DT (bulletin),Bulletin officiel BVMT Bull20260526.pdf
+2026-05-29,TN0002600955,STB,STB,6.03,5.83,0.9668325041459369,dividende,dividende 0.200 DT (bulletin),Bulletin officiel BVMT Bull20260529.pdf
+2026-05-29,TN0003400058,AB,AMEN BANK,73.58,69.98,0.9510736613210112,dividende,dividende 3.600 DT (bulletin),Bulletin officiel BVMT Bull20260529.pdf
+2026-06-02,TN0003900107,UIB,UIB,32.5,31.5,0.9692307692307692,dividende,dividende 1.000 DT (bulletin),Bulletin officiel BVMT Bull20260602.pdf
+2026-06-08,TN0007830011,ASSMA,ASSUR MAGHREBIA,88.5,85.6,0.967231638418079,dividende,dividende 2.900 DT (bulletin),Bulletin officiel BVMT Bull20260608.pdf
+2026-06-08,TNDKJ8O68X14,AMV,ASSU MAGHREBIA VIE,10.69,10.27,0.960710944808232,dividende,dividende 0.421 DT (bulletin),Bulletin officiel BVMT Bull20260608.pdf
+2026-06-10,TNQPQXRODTH8,SMART,SMART TUNISIE,29.98,28.98,0.9666444296197465,dividende,dividende 1.000 DT (bulletin),Bulletin officiel BVMT Bull20260610.pdf
+2026-06-12,TN0001100254,SFBT,SFBT,15.3,14.42,0.9424836601307189,dividende,dividende 0.880 DT (bulletin),Bulletin officiel BVMT Bull20260612.pdf
+2026-06-15,TN0003100609,BNA,BNA,19.82,18.67,0.9419778002018164,dividende,dividende 1.150 DT (bulletin),Bulletin officiel BVMT Bull20260615.pdf
+2026-06-15,TN0007830011,ASSMA,ASSUR MAGHREBIA,84.9,69.46,0.8181389870435806,dividende probable,écart 15.440 DT (18.2%),Bulletin officiel BVMT Bull20260615.pdf
+2026-06-18,TN0005700018,PGH,POULINA GP HOLDING,28.24,27.57,0.9762747875354109,dividende,dividende 0.670 DT (bulletin),Bulletin officiel BVMT Bull20260618.pdf
+2026-06-19,TN0004700100,ATL,ATL,12.5,12.1,0.968,dividende,dividende 0.400 DT (bulletin),Bulletin officiel BVMT Bull20260619.pdf
+2026-06-23,TN0007530017,OTH,ONE TECH HOLDING,13.05,12.72,0.9747126436781609,dividende,dividende 0.330 DT (bulletin),Bulletin officiel BVMT Bull20260623.pdf
+2026-06-23,TN0007610017,SAH,SAH,14.3,13.9,0.972027972027972,dividende,dividende 0.400 DT (bulletin),Bulletin officiel BVMT Bull20260623.pdf
+2026-06-26,TN0007580012,BL,BEST LEASE,2.97,2.82,0.9494949494949494,dividende,dividende 0.150 DT (bulletin),Bulletin officiel BVMT Bull20260626.pdf
+2026-07-01,TN0003000452,AST,ASTREE,75.0,72.0,0.96,dividende,dividende 3.000 DT (bulletin),Bulletin officiel BVMT Bull20260701.pdf
+2026-07-06,TN0004100202,TINV,TUNINVEST-SICAR,53.79,52.29,0.9721137757947574,dividende,dividende 1.500 DT (bulletin),Bulletin officiel BVMT Bull20260706.pdf
+2026-07-06,TN0007180011,SITS,SITS,4.85,4.8,0.9896907216494846,dividende,dividende 0.050 DT (bulletin),Bulletin officiel BVMT Bull20260706.pdf
+2026-07-07,TN0007550015,CITY,CITY CARS,25.65,24.4,0.9512670565302144,dividende,dividende 1.250 DT (bulletin),Bulletin officiel BVMT Bull20260707.pdf
+2026-07-07,TN0007620016,MPBS,MPBS,10.61,10.37,0.9773798303487276,dividende,dividende 0.240 DT (bulletin),Bulletin officiel BVMT Bull20260707.pdf
+2026-07-08,TN0006580013,MGR,SOTUMAG,15.52,14.94,0.9626288659793815,dividende,dividende 0.580 DT (bulletin),Bulletin officiel BVMT Bull20260708.pdf
+2026-07-13,TN0007410012,NAKL,ENNAKL AUTOMOBILES,23.75,22.75,0.9578947368421052,dividende,dividende 1.000 DT (bulletin),Bulletin officiel BVMT Bull20260713.pdf
+2026-07-13,TN0007670011,DH,DELICE HOLDING,20.0,19.45,0.9724999999999999,dividende,dividende 0.550 DT (bulletin),Bulletin officiel BVMT Bull20260713.pdf
+2026-07-15,TN0006560015,SOTUV,SOTUVER,29.6,29.35,0.9915540540540541,dividende,dividende 0.250 DT (bulletin),Bulletin officiel BVMT Bull20260715.pdf
+2026-07-22,TN0007270010,TPR,TPR,16.0,15.5,0.96875,dividende,dividende 0.500 DT (bulletin),Bulletin officiel BVMT Bull20260722.pdf
+2026-07-22,TN0007300015,ARTES,ARTES,13.05,12.65,0.9693486590038314,dividende,dividende 0.400 DT (bulletin),Bulletin officiel BVMT Bull20260722.pdf
+2026-07-24,TN0007510019,LNDOR,LAND OR,16.5,16.1,0.9757575757575758,dividende,dividende 0.400 DT (bulletin),Bulletin officiel BVMT Bull20260724.pdf
+2026-07-28,TN0006660013,STPIL,SOTRAPIL,38.21,36.51,0.9555090290499868,dividende,dividende 1.700 DT (bulletin),Bulletin officiel BVMT Bull20260728.pdf
+2026-08-05,TN0007700016,PLAST,OFFICEPLAST,1.85,1.8,0.9729729729729729,dividende probable,écart 0.050 DT (2.7%),Bulletin officiel BVMT Bull20260805.pdf
+2026-08-10,TN0007400013,CC,CARTHAGE CEMENT,2.1,2.04,0.9714285714285714,dividende,dividende 0.065 DT (bulletin),Bulletin officiel BVMT Bull20260810.pdf
+2026-08-12,TN0006060016,STAR,STAR,89.0,86.41,0.9708988764044943,dividende,dividende 2.593 DT (bulletin),Bulletin officiel BVMT Bull20260812.pdf
+2026-08-12,TN0007440019,TLNET,TELNET HOLDING,13.09,12.74,0.9732620320855615,dividende,dividende 0.350 DT (bulletin),Bulletin officiel BVMT Bull20260812.pdf
+2026-08-14,TN0001000108,MNP,MONOPRIX,12.55,12.35,0.9840637450199202,dividende,dividende 0.200 DT (bulletin),Bulletin officiel BVMT Bull20260814.pdf
+2026-08-14,TN0007210016,SOKNA,ESSOUKNA,3.87,3.77,0.9741602067183462,dividende,dividende 0.100 DT (bulletin),Bulletin officiel BVMT Bull20260814.pdf
+2026-08-17,TN0002300358,AL,AIR LIQUIDE TSIE,230.0,221.1,0.961304347826087,dividende,dividende 8.900 DT (bulletin),Bulletin officiel BVMT Bull20260817.pdf
+2026-08-24,TN0007570013,ECYCL,EURO-CYCLES,12.58,11.88,0.9443561208267092,dividende,dividende 0.700 DT (bulletin),Bulletin officiel BVMT Bull20260824.pdf
+2026-08-27,TN0003200755,ICF,ICF,152.9,149.7,0.9790712884238063,dividende,dividende 3.200 DT (bulletin),Bulletin officiel BVMT Bull20260827.pdf
+2026-08-27,TN0007740012,SAM,ATELIER MEUBLE INT,6.44,6.13,0.951863354037267,dividende,dividende 0.315 DT (bulletin),Bulletin officiel BVMT Bull20260827.pdf
+2026-09-07,TN0005700018,PGH,POULINA GP HOLDING,27.55,26.24,0.9524500907441016,dividende probable,écart 1.310 DT (4.8%),Bulletin officiel BVMT Bull20260907.pdf
+2026-09-09,TN0006530018,SOTET,SOTETEL,25.47,24.87,0.9764428739693758,dividende,dividende 0.600 DT (bulletin),Bulletin officiel BVMT Bull20260909.pdf
+2026-09-09,TN0007720014,UMED,UNIMED,9.98,9.36,0.937875751503006,dividende,dividende 0.625 DT (bulletin),Bulletin officiel BVMT Bull20260909.pdf
+2026-09-10,TN0007700016,PLAST,OFFICEPLAST,1.61,1.34,0.8322981366459627,dividende probable,écart 0.270 DT (16.8%),Bulletin officiel BVMT Bull20260910.pdf
+2026-09-15,TN0007380017,TRE,TUNIS RE,13.56,9.77,0.7205014749262536,division / attribution probable,facteur 0.7205,Bulletin officiel BVMT Bull20260915.pdf
+2026-09-23,TN0006590012,SIAME,SIAME,4.41,4.34,0.9841269841269841,dividende,dividende 0.070 DT (bulletin),Bulletin officiel BVMT Bull20260923.pdf
+2026-09-24,TN0007540016,NBL,NEW BODY LINE,3.04,2.99,0.9835526315789475,dividende,dividende 0.050 DT (bulletin),Bulletin officiel BVMT Bull20260924.pdf
+2026-10-01,TNQPQXRODTH8,SMART,SMART TUNISIE,33.49,30.45,0.909226634816363,dividende probable,écart 3.040 DT (9.1%),Bulletin officiel BVMT Bull20261001.pdf
+2026-10-12,TN0007510019,LNDOR,LAND OR,14.5,14.4,0.993103448275862,dividende,dividende 0.100 DT (bulletin),Bulletin officiel BVMT Bull20261012.pdf

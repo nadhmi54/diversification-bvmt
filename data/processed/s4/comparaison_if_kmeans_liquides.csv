@@ -1,0 +1,4 @@
+categorie,nb,titres
+en commun (IF et k-means),1,SCB
+seulement Isolation Forest,5,"AB, BHL, BIAT, SOTET, WIFAK"
+seulement k-means,1,CELL

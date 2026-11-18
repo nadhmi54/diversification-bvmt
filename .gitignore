@@ -1,0 +1,19 @@
+# Données brutes : trop volumineuses (237 Mo), retéléchargeables avec src/collecte.py
+data/raw/archives/
+data/raw/bulletins/*.bin
+data/raw/bulletins/pdf/
+# on garde data/raw/bulletins/manifeste_bulletins.csv (URL et date de chaque bulletin)
+
+# Documents de cours internes et article sous droit d'auteur (non publiés)
+Business Understanding/
+
+# Python / Jupyter / système
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
