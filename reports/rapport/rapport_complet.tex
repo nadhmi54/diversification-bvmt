@@ -72,8 +72,8 @@
 % ---------------------------------------------------------------- garde
 \begin{titlepage}
 \centering
-{\large ESPRIT School of Engineering\par}
-{\normalsize Option Informatique financière · 5INFINI · Année universitaire 2026-2027\par}
+{\large École supérieure privée d'ingénierie et de technologie\par}
+{\normalsize  · 5INFINI · Année universitaire 2026-2027\par}
 \vspace{2.2cm}
 {\color{navy}\rule{\linewidth}{1pt}\par\vspace{0.4cm}}
 {\Huge\bfseries\color{navy} Diversifier par l'apprentissage\\[4pt] non supervisé à la Bourse de Tunis\par}
@@ -85,9 +85,9 @@
 \vspace{1.5cm}
 {\large\bfseries Équipe\par}
 \vspace{0.2cm}
-{\large Nadhmi Rouissi · Youssef Mellouli · Safwen Haboubi\\ Chahine Saadellaoui · Haroun Chebaane · Ghassen Hamdi\par}
+{\large Nadhmi Rouissi · Mohamed Youssef Mellouli · Safwen Haboubi\\ Chahine Saadellaoui · Haroun Chebaane · Ghassen Hamdi\par}
 \vspace{1.2cm}
-{\large Encadrant : \afaire{nom de l'encadrant}\par}
+{\large Encadrants : Ben Lasmar Mohamed Anis \\ Chebbi Mohsen\par}
 \vfill
 {\large Novembre 2026\par}
 \end{titlepage}
@@ -120,22 +120,23 @@ Notre projet a deux objectifs :
 \end{enumerate}
 
 \subsection{Organisation de l'équipe}
-Le cahier des charges demande un responsable par rôle. Chaque membre reste responsable de la compréhension de l'ensemble du projet.
+Le cahier des charges demande un responsable par r\^ole ; la responsabilit\'e Donn\'ees est partag\'ee entre deux membres. Chaque membre reste responsable de la compr\'ehension de l'ensemble du projet.
 
 \begin{table}[H]\centering\small
 \caption{Répartition des rôles}\label{tab:roles}
 \begin{tabular}{lp{7.5cm}l}\toprule
 Rôle & Responsabilités & Responsable \\ \midrule
-Données & Collecte, nettoyage, opérations sur titres, rapport qualité & \afaire{nom} \\
-Features et Markowitz & Indicateurs de risque, variance minimale, Sharpe maximal & \afaire{nom} \\
-Segmentation & k-means, ACP, Isolation Forest, choix de $k$, interprétation & \afaire{nom} \\
-Extension & Mise en œuvre de l'extension choisie & \afaire{nom} \\
-Synthèse & Analyse critique, rapport \LaTeX{} et présentation & \afaire{nom} \\
+Données & Collecte des données officielles et extraction des cours & Nadhmi Rouissi \\
+Données & Nettoyage, ajustement des opérations sur titres et contrôle qualité & Mohamed Youssef Mellouli \\
+Features et Markowitz & Indicateurs de risque, variance minimale, Sharpe maximal & Safwen Haboubi \\
+Segmentation & k-means, ACP, Isolation Forest, choix de $k$, interprétation & Chahine Saadellaoui \\
+Extension & Mise en œuvre de l'extension choisie & Haroun Chebaane \\
+Synthèse & Analyse critique, rapport LaTeX et présentation & Ghassen Hamdi \\
 \bottomrule\end{tabular}
 \end{table}
 
 \subsection{Plan du rapport}
-La partie~I (sections~\ref{sec:art-objectif} à~\ref{sec:art-limites}) présente l'article et ses limites. La partie~II (sections~\ref{sec:notre-objectif} à~\ref{sec:interface}) présente notre travail : données, paramètres, Markowitz, segmentation, anomalies, contrôle de robustesse avec cinq features et interface de restitution. La section~\ref{sec:critique} discute les limites de notre propre travail, avant la conclusion. Les annexes donnent la déclaration d'usage de l'IA générative, la reproductibilité et les tableaux complets.
+La partie~I (sections~\ref{sec:art-objectif} à~\ref{sec:art-limites}) présente l'article et ses limites. La partie~II (sections~\ref{sec:notre-objectif} à~\ref{sec:5f}) présente notre travail : données, paramètres, Markowitz, segmentation, anomalies et contrôle de robustesse avec cinq features. La conclusion résume les résultats et les pistes à poursuivre.
 
 % =====================================================================
 \part{L'article de référence}
@@ -238,7 +239,7 @@ Nous gardons la même question, mais avec les sociétés cotées aujourd'hui et 
   \item vérification de la nature de chaque anomalie, en particulier de la liquidité ;
   \item chaque résultat refait sur les seuls titres liquides.
 \end{itemize}
-Le travail suit les étapes du cahier des charges : données (S2), features et Markowitz (S3), segmentation et anomalies (S4), complétées par un contrôle de robustesse à cinq features (S4b).
+Le travail suit le cahier des charges : préparation des données, calcul des indicateurs et des portefeuilles, segmentation et détection des anomalies, puis contrôle de robustesse avec cinq features.
 
 \section{Nos données}\label{sec:donnees}
 \subsection{Sources et période}
@@ -264,7 +265,7 @@ Les dividendes, attributions gratuites et divisions d'actions font baisser méca
 \begin{equation}
 f_t = \frac{\text{référence}_t}{\text{clôture}_{t-1}},
 \end{equation}
-et nous calculons le rendement du jour à partir du cours de référence (section~\ref{sec:features}). Nous trouvons ainsi \textbf{228 opérations sur titres} (détail en annexe~\ref{ann:ost}).
+et nous calculons le rendement du jour à partir du cours de référence (section~\ref{sec:features}). Nous trouvons ainsi \textbf{228 opérations sur titres}.
 
 \begin{figure}[H]\centering
 \includegraphics[width=\linewidth]{biat_brut_ajuste.png}
@@ -307,7 +308,7 @@ Sur les $T = 959$ rendements, avec $\bar r$ la moyenne et $s$ l'écart-type :
 \text{VaR}_{95} = q_{5\%}(r), \qquad \text{CVaR}_{95} = \mathbb{E}\left[\,r \mid r \leq \text{VaR}_{95}\right], \qquad
 \beta = \frac{\operatorname{Cov}(r, r_M)}{\operatorname{Var}(r_M)},
 \end{equation}
-où $r_M$ est le rendement du Tunindex. VaR et CVaR sont historiques et journalières. On obtient \textbf{une valeur par titre sur toute la période}, soit un tableau de 75 titres $\times$ 7 features (annexe~\ref{ann:features}).
+où $r_M$ est le rendement du Tunindex. VaR et CVaR sont historiques et journalières. On obtient \textbf{une valeur par titre sur toute la période}, soit un tableau de 75 titres $\times$ 7 features.
 
 \subsection{Description}
 \begin{table}[H]\centering\small
@@ -371,7 +372,7 @@ Univers & Portefeuille & Rendement & Volatilité & Sharpe & Premier poids \\ \mi
 \bottomrule\end{tabular}
 \end{table}
 
-Le portefeuille de Sharpe maximal donne 4,93. Le meilleur de 20\,000 portefeuilles tirés au hasard n'atteint que 3,22 : l'optimisation exacte fait mieux que la simulation de l'article. Les poids détaillés sont en annexe~\ref{ann:poids}.
+Le portefeuille de Sharpe maximal donne 4,93. Le meilleur de 20\,000 portefeuilles tirés au hasard n'atteint que 3,22 : l'optimisation exacte fait mieux que la simulation de l'article.
 
 \subsection{Deux résultats à ne pas prendre au pied de la lettre}
 \paragraph{Le piège de la variance minimale.} Le portefeuille de variance minimale met 37\pc{} sur PLTU et 14\pc{} sur SIMPA, deux titres échangés 4\pc{} et 12\pc{} des séances. Leur volatilité est faible parce que leur prix ne bouge presque jamais, pas parce qu'ils sont peu risqués. Ce portefeuille ne pourrait pas être acheté en pratique. Sur les 57 titres liquides, sa volatilité passe de 2,9\pc{} à 4,8\pc{}.
@@ -514,7 +515,7 @@ SMD & Sanimed & 5 & 27\pc{} & $-39{,}1$\pc{} & artefact d'illiquidité \\
   \item \textbf{SOTET et AB sont de vrais extrêmes de performance}, avec 59\pc{} et 47\pc{} de rendement annualisé, à confirmer avec des sources externes.
   \item \textbf{Sur les 57 titres liquides}, les anomalies stables sont AB (9 sur 12), SOTET (8) et WIFAK (8). WIFAK, échangée 69\pc{} des séances, a 61\pc{} de rendements nuls : elle relève encore de l'illiquidité.
 \end{itemize}
-Le détail des titres signalés à chaque taux est en annexe~\ref{ann:stabilite}.
+
 
 \begin{retenir}
 La plupart des anomalies viennent de l'illiquidité. L'article validait ses anomalies par la presse sans contrôler la liquidité : une partie d'entre elles pourrait relever du même artefact.
@@ -550,32 +551,14 @@ Les écarts de corrélation moyenne sont faibles ; d'autres raisons vont dans le
 
 \begin{figure}[H]\centering
 \includegraphics[width=\linewidth]{s4b_clusters_7F_vs_5F.png}
-\caption{Groupes avec 7 features (S4) et avec 5 features (S4b), dans le même plan PC1-PC2 ; cercles : anomalies à 5\pc{}.}\label{fig:7f-5f}
+\caption{Comparaison des groupes obtenus avec 7 et 5 features dans le même plan PC1-PC2 ; cercles : anomalies à 5\pc{}.}\label{fig:7f-5f}
 \end{figure}
 
 \paragraph{Sur les 57 titres liquides.} Le vote retient encore $k = 3$ (24 / 18 / 15 titres), mais la silhouette est basse (0,29) et $k = 2$ ferait mieux (0,36) : chez les titres liquides, la structure de groupes est très faible. Les anomalies stables sont AB, CELL et SOTET, toutes liquides et expliquées par une feature mesurable (AB : skewness à $+3{,}0\sigma$ ; CELL : rendement à $-2{,}2\sigma$ ; SOTET : rendement à $+2{,}2\sigma$). AB et SOTET sont confirmées ; WIFAK est remplacée par CELL.
 
 \begin{retenir}
-Retirer les features redondantes ne change pas les conclusions : mêmes groupes à quatre titres près, mêmes anomalies. Les résultats de la S4 ne venaient pas de la redondance.
+Retirer les features redondantes ne change pas les conclusions : mêmes groupes à quatre titres près et mêmes anomalies. La segmentation reste proche après ce retrait.
 \end{retenir}
-
-\section{Restitution : une interface interactive}\label{sec:interface}
-Pour rendre les résultats consultables, nous avons développé une interface Streamlit (dossier \texttt{app/} du dépôt). Elle comporte sept pages : accueil, données, paramètres, Markowitz, segmentation, anomalies et fiche par titre. Elle lit les sorties des notebooks et refait les calculs avec les mêmes paramètres et la même graine. Par défaut, elle affiche les résultats du projet ; des réglages (nombre de groupes, taux de contamination, taux sans risque, titres liquides seulement) permettent d'explorer, et chaque page signale quand on s'écarte des choix du projet. Un script de contrôle vérifie que l'interface redonne les résultats des notebooks (21 contrôles, annexe~\ref{ann:controles}).
-
-\begin{figure}[H]\centering
-\includegraphics[width=0.85\linewidth]{interface_markowitz.png}
-\caption{Page Markowitz de l'interface : frontière interactive et réglages.}\label{fig:interface}
-\end{figure}
-
-\section{Analyse critique de notre travail}\label{sec:critique}
-\begin{itemize}
-  \item \textbf{Tous les résultats sont dans l'échantillon.} Ni les portefeuilles de Markowitz ni les groupes n'ont encore été testés sur des données futures. C'est la limite principale, la même que celle reprochée à l'article.
-  \item \textbf{La structure de groupes est faible} (silhouette de 0,29 à 0,47). Diversifier « entre groupes » n'a de sens que si les groupes sont nets ; ce point devra être vérifié par la performance des portefeuilles.
-  \item \textbf{Les features restent individuelles.} Comme dans l'article, elles ne décrivent pas les co-mouvements. Une segmentation sur les corrélations entre titres serait plus proche de l'idée de diversification.
-  \item \textbf{La liquidité domine.} Elle explique à la fois le premier découpage des groupes et la plupart des anomalies. Nous l'avons montré, mais pas encore corrigé dans les features (par exemple par une volatilité calculée sur les seuls jours échangés).
-  \item \textbf{Biais du survivant} : les dix sociétés radiées depuis 2023 sont exclues, alors qu'elles seraient justement les anomalies les plus intéressantes à détecter.
-  \item \textbf{Secteurs} : les secteurs des titres ne sont pas encore renseignés ; la comparaison entre groupes et secteurs reste à faire.
-\end{itemize}
 
 % =====================================================================
 \section*{Conclusion et perspectives}
@@ -596,7 +579,6 @@ Sur des données officielles 2023-2026, corrigées des opérations sur titres, n
   \item construire le portefeuille « un titre par groupe » et le comparer au 1/N et à Markowitz \textbf{hors échantillon} (par exemple : estimation sur 2023-2025, test sur 2026) ;
   \item lire les groupes par secteur ;
   \item justifier les anomalies liquides (SOTET, AB) avec les états financiers et les communiqués du CMF ;
-  \item mettre en œuvre l'extension du projet : \afaire{extension choisie et résultats}.
 \end{itemize}
 
 % =====================================================================
@@ -619,421 +601,4 @@ Sur des données officielles 2023-2026, corrigées des opérations sur titres, n
   \item Hubert, L. et Arabie, P. (1985). Comparing Partitions. \emph{Journal of Classification}, 2(1), 193-218.
   \item Bourse des valeurs mobilières de Tunis : archives de cotation et bulletins officiels de la cote, 2023-2026.
 \end{enumerate}
-
-% =====================================================================
-\clearpage
-\appendix
-\renewcommand{\thesection}{\Alph{section}}
-\section*{Annexes}
-\addcontentsline{toc}{section}{Annexes}
-% =====================================================================
-
-\section{Déclaration d'usage de l'IA générative}\label{ann:ia}
-Conformément au cahier des charges, nous déclarons avoir utilisé un assistant d'IA générative (Claude, Anthropic) pendant le projet, pour :
-\begin{itemize}
-  \item l'aide à l'écriture du code : scripts de collecte et d'extraction des bulletins PDF, notebooks S3, S4 et S4b, interface Streamlit ;
-  \item l'aide à la rédaction : reformulation de textes, structure du rapport et de la présentation, code \LaTeX{} du rapport ;
-  \item l'explication de notions (construction de la frontière efficiente, critères de choix de $k$).
-\end{itemize}
-Les choix de méthode ont été discutés et validés par l'équipe. Chaque résultat a été vérifié par des contrôles automatiques (annexe~\ref{ann:controles}) et peut être reproduit à partir du dépôt. L'équipe reste responsable de chaque ligne rendue et est en mesure de l'expliquer. \afaire{préciser, si besoin, la part de chaque membre et les vérifications faites}
-
-\section{Reproductibilité}\label{ann:repro}
-\subsection*{Dépôt et structure}
-Le code est disponible sur \url{https://github.com/nadhmi54/diversification-bvmt}. Les données brutes ne sont pas versionnées (elles se retéléchargent depuis les sources officielles) ; les données traitées et toutes les sorties le sont.
-
-\begin{verbatim}
-src/                  collecte, extraction des bulletins, construction des données (S2)
-notebooks/            S3_features_markowitz, S4_segmentation_anomalies,
-                      S4b_segmentation_5_features, S3_S4_complet (les trois réunis)
-data/processed/       données de la S2 ; sorties S4 (s4/) et S4b (s4_5f/)
-data/s3/              sorties de la S3
-app/                  interface Streamlit
-reports/              note qualité, rapport S3, présentation
-\end{verbatim}
-
-\subsection*{Commandes}
-\begin{verbatim}
-pip install -r requirements.txt
-python src/collecte.py
-python src/parse_bulletins.py data/raw/bulletins/pdf
-python src/parse_tunindex_bulletins.py
-python src/build_dataset.py
-jupyter nbconvert --to notebook --execute --inplace notebooks/S3_S4_complet.ipynb
-streamlit run app/Accueil.py
-python app/verifier_coherence.py
-\end{verbatim}
-
-\subsection*{Paramètres fixes}
-Graine aléatoire 42 (k-means, Isolation Forest, ACP) ; graine 0 pour les 20\,000 portefeuilles aléatoires de contrôle ; 252 séances par an ; seuil de liquidité 60\pc{} ; taux sans risque $\ln(1{,}07)$ ; chemins relatifs dans tous les notebooks.
-
-\section{Contrôles automatiques}\label{ann:controles}
-\begin{itemize}
-  \item \textbf{S3} : rendements $959 \times 75$ sans valeur manquante ; dates du Tunindex identiques à celles des titres ; VaR $\leq 0$ et CVaR $\leq$ VaR ; corrélations symétriques de diagonale 1 ; covariance définie positive ; poids de somme 1 et dans $[0,1]$ ; frontière croissante.
-  \item \textbf{S4 et S4b} : 75 titres $\times$ 7 (ou 5) features sans valeur manquante ; standardisation correcte ; seuil par rang identique à \texttt{IsolationForest(contamination=taux)} pour chaque combinaison ; $k$ retenu dans la plage ; chaque titre a un groupe.
-  \item \textbf{Notebook réuni} : les 33 fichiers de résultats produits par \texttt{S3\_S4\_complet} sont identiques à ceux des trois notebooks séparés.
-  \item \textbf{Interface} : 21 contrôles (k retenus, groupes, scores Isolation Forest et signalements identiques à la S4 et à la S4b ; Sharpe 4,93, poids et meilleur portefeuille aléatoire identiques à la S3).
-\end{itemize}
-
-\section{Opérations sur titres}\label{ann:ost}
-\begin{table}[H]\centering\small\caption{Opérations sur titres détectées par le cours de référence officiel, par type et par année}\label{tab:annexe-ost}
-\begin{tabular}{lrrrrr}\toprule
-Type & 2023 & 2024 & 2025 & 2026 & Total \\ \midrule
-ajustement à la hausse (reprise de cotation ?) & 4 & 0 & 2 & 0 & 6 \\
-attribution gratuite & 2 & 4 & 3 & 0 & 9 \\
-dividende & 1 & 1 & 50 & 53 & 105 \\
-dividende probable & 51 & 47 & 1 & 5 & 104 \\
-division / attribution probable & 1 & 0 & 2 & 1 & 4 \\
-\midrule
-Total & 59 & 52 & 58 & 59 & 228 \\
-\bottomrule\end{tabular}\end{table}
-\begin{table}[H]\centering\small\caption{Exemple : les 5 opérations sur titres de BIAT}\label{tab:annexe-biat}
-\begin{tabular}{llrrrp{5cm}}\toprule
-Date & Type & Clôture veille & Référence & Facteur & Détail \\ \midrule
-15/05/2023 & dividende probable & 96{,}00 & 90{,}20 & 0{,}9396 & écart 5.800 DT (6.0\%) \\
-13/05/2024 & dividende probable & 95{,}80 & 89{,}80 & 0{,}9374 & écart 6.000 DT (6.3\%) \\
-29/11/2024 & attribution gratuite & 105{,}00 & 91{,}88 & 0{,}8750 & BIAT DA1/7 291124 : 1 nouvelle(s) pour 7 anciennes (f théorique 0.8750) \\
-12/05/2025 & dividende & 103{,}45 & 97{,}45 & 0{,}9420 & dividende 6.000 DT (bulletin) \\
-12/05/2026 & dividende & 160{,}00 & 154{,}00 & 0{,}9625 & dividende 6.000 DT (bulletin) \\
-\bottomrule\end{tabular}\end{table}
-
-\section{Titres retirés de l'univers}\label{ann:retires}
-\begin{table}[H]\centering\small
-\caption{Les 10 sociétés présentes dans les sources mais plus cotées au 03/11/2026}\label{tab:retires}
-\begin{tabular}{lll}\toprule
-Société & ISIN & Dernière séance \\ \midrule
-ADWYA & TN0007250012 & 05/01/2023 \\
-CEREALIS & TN0007640014 & 13/02/2023 \\
-AMS & TN0001500859 & 15/09/2023 \\
-SOPAT & TN0007290018 & 03/11/2023 \\
-SERVICOM & TN0007340011 & 30/04/2024 \\
-ELECTROSTAR & TN0006650014 & 10/09/2024 \\
-Maghreb International Publicité & TN0007660012 & 10/09/2024 \\
-GIF-Filter & TN0007130016 & 11/11/2024 \\
-Société tunisienne du sucre & TN0006170013 & 31/12/2025 \\
-SITEX & TN0004300307 & 31/12/2025 \\
-\bottomrule\end{tabular}
-\end{table}
-
-\section{Liste des 75 titres et résultats par titre}\label{ann:titres}
-Colonnes RV, 7F, ACP, 5F : numéro du groupe k-means dans chaque espace (1 = le plus grand). IF/12 : nombre de signalements Isolation Forest sur les 12 tests de la S4.
-{\small\begin{longtable}{llrrcccccc}
-\caption{Les 75 titres : liquidité, groupes k-means et signalements Isolation Forest}\label{tab:annexe-titres}\\
-\toprule Ticker & Nom & Séances & Rdts nuls & Liq. & RV & 7F & ACP & 5F & IF/12 \\ \midrule \endfirsthead
-\toprule Ticker & Nom & Séances & Rdts nuls & Liq. & RV & 7F & ACP & 5F & IF/12 \\ \midrule \endhead \bottomrule \endfoot
-AB & AMEN BANK & 99~\% & 17~\% & oui & 1 & 1 & 1 & 1 & 6 \\
-AETEC & AETECH & 23~\% & 70~\% & non & 6 & 2 & 2 & 2 & 0 \\
-AL & AIR LIQUIDE TSIE & 69~\% & 53~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-ALKIM & ALKIMIA & 18~\% & 86~\% & non & 6 & 2 & 2 & 2 & 6 \\
-AMV & ASSU MAGHREBIA VIE & 93~\% & 33~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-ARTES & ARTES & 98~\% & 22~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-ASSAD & ASSAD & 88~\% & 28~\% & oui & 3 & 2 & 2 & 2 & 0 \\
-ASSMA & ASSUR MAGHREBIA & 59~\% & 62~\% & non & 1 & 1 & 1 & 1 & 0 \\
-AST & ASTREE & 32~\% & 79~\% & non & 2 & 1 & 2 & 2 & 0 \\
-ATB & ATB & 96~\% & 25~\% & oui & 2 & 1 & 1 & 1 & 0 \\
-ATL & ATL & 94~\% & 31~\% & oui & 5 & 1 & 1 & 1 & 0 \\
-BH & BH BANK & 89~\% & 30~\% & oui & 2 & 1 & 1 & 1 & 0 \\
-BHASS & BH ASSURANCE & 10~\% & 94~\% & non & 4 & 1 & 1 & 1 & 7 \\
-BHL & BH LEASING & 69~\% & 42~\% & oui & 3 & 2 & 2 & 2 & 1 \\
-BIAT & BIAT & 100~\% & 14~\% & oui & 4 & 1 & 1 & 1 & 1 \\
-BL & BEST LEASE & 39~\% & 72~\% & non & 2 & 2 & 2 & 2 & 0 \\
-BNA & BNA & 100~\% & 18~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-BNASS & BNA ASSURANCES & 90~\% & 25~\% & oui & 2 & 1 & 1 & 1 & 0 \\
-BT & BT & 100~\% & 30~\% & oui & 4 & 1 & 1 & 1 & 0 \\
-BTE & BTE (ADP) & 69~\% & 40~\% & oui & 3 & 2 & 2 & 2 & 0 \\
-CC & CARTHAGE CEMENT & 100~\% & 24~\% & oui & 4 & 1 & 1 & 1 & 0 \\
-CELL & CELLCOM & 69~\% & 35~\% & oui & 7 & 2 & 2 & 2 & 2 \\
-CIL & CIL & 79~\% & 44~\% & oui & 5 & 1 & 1 & 1 & 0 \\
-CITY & CITY CARS & 98~\% & 22~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-DH & DELICE HOLDING & 99~\% & 19~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-ECYCL & EURO-CYCLES & 100~\% & 11~\% & oui & 6 & 2 & 2 & 2 & 0 \\
-HL & HANNIBAL LEASE & 56~\% & 69~\% & non & 1 & 1 & 1 & 1 & 0 \\
-ICF & ICF & 96~\% & 16~\% & oui & 2 & 1 & 1 & 2 & 0 \\
-LNDOR & LAND OR & 95~\% & 21~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-MAG & MAGASIN GENERAL & 48~\% & 65~\% & non & 2 & 2 & 2 & 2 & 0 \\
-MGR & SOTUMAG & 94~\% & 32~\% & oui & 5 & 1 & 1 & 1 & 0 \\
-MNP & MONOPRIX & 71~\% & 46~\% & oui & 3 & 2 & 2 & 2 & 0 \\
-MPBS & MPBS & 92~\% & 29~\% & oui & 5 & 1 & 1 & 1 & 0 \\
-NAKL & ENNAKL AUTOMOBILES & 86~\% & 33~\% & oui & 2 & 1 & 1 & 1 & 0 \\
-NBL & NEW BODY LINE & 84~\% & 39~\% & oui & 6 & 2 & 2 & 2 & 0 \\
-OTH & ONE TECH HOLDING & 99~\% & 15~\% & oui & 4 & 1 & 1 & 1 & 0 \\
-PGH & POULINA GP HOLDING & 97~\% & 20~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-PLAST & OFFICEPLAST & 75~\% & 38~\% & oui & 3 & 2 & 2 & 2 & 0 \\
-PLTU & PLAC. TSIE-SICAF & 4~\% & 98~\% & non & 8 & 3 & 3 & 3 & 12 \\
-SAH & SAH & 100~\% & 18~\% & oui & 4 & 1 & 1 & 1 & 0 \\
-SAM & ATELIER MEUBLE INT & 99~\% & 28~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-SCB & CIMENTS DE BIZERTE & 65~\% & 44~\% & oui & 7 & 2 & 2 & 2 & 1 \\
-SFBT & SFBT & 100~\% & 19~\% & oui & 4 & 1 & 1 & 1 & 0 \\
-SIAME & SIAME & 95~\% & 26~\% & oui & 2 & 2 & 2 & 2 & 0 \\
-SIMPA & SIMPAR & 12~\% & 97~\% & non & 8 & 1 & 1 & 1 & 11 \\
-SIPHA & SIPHAT & 34~\% & 69~\% & non & 6 & 2 & 2 & 2 & 0 \\
-SITS & SITS & 25~\% & 80~\% & non & 2 & 2 & 2 & 2 & 0 \\
-SMART & SMART TUNISIE & 96~\% & 22~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-SMD & SANIMED & 27~\% & 58~\% & non & 7 & 2 & 2 & 2 & 5 \\
-SOKNA & ESSOUKNA & 75~\% & 35~\% & oui & 3 & 2 & 2 & 2 & 0 \\
-SOMOC & SOMOCER & 92~\% & 44~\% & oui & 3 & 2 & 2 & 2 & 0 \\
-SOTEM & SOTEMAIL & 10~\% & 64~\% & non & 3 & 2 & 2 & 2 & 0 \\
-SOTET & SOTETEL & 99~\% & 16~\% & oui & 5 & 1 & 1 & 1 & 10 \\
-SOTUV & SOTUVER & 99~\% & 16~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-SPDIT & SPDIT - SICAF & 87~\% & 48~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-STA & STA & 87~\% & 27~\% & oui & 5 & 1 & 1 & 1 & 0 \\
-STAR & STAR & 72~\% & 47~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-STB & STB & 99~\% & 23~\% & oui & 2 & 1 & 1 & 1 & 0 \\
-STIP & STIP & 49~\% & 54~\% & non & 3 & 2 & 2 & 2 & 0 \\
-STPAP & SOTIPAPIER & 97~\% & 23~\% & oui & 6 & 2 & 2 & 2 & 0 \\
-STPIL & SOTRAPIL & 94~\% & 24~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-TAIR & TUNISAIR & 90~\% & 56~\% & oui & 6 & 2 & 2 & 2 & 1 \\
-TGH & TAWASOL GP HOLDING & 89~\% & 32~\% & oui & 3 & 2 & 2 & 2 & 0 \\
-TINV & TUNINVEST-SICAR & 43~\% & 63~\% & non & 5 & 2 & 2 & 1 & 0 \\
-TJARI & ATTIJARI BANK & 100~\% & 12~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-TJL & ATTIJARI LEASING & 79~\% & 45~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-TLNET & TELNET HOLDING & 99~\% & 16~\% & oui & 2 & 1 & 1 & 1 & 0 \\
-TLS & TUNISIE LEASING F & 86~\% & 30~\% & oui & 5 & 1 & 1 & 1 & 0 \\
-TPR & TPR & 100~\% & 16~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-TRE & TUNIS RE & 81~\% & 46~\% & oui & 1 & 1 & 1 & 1 & 0 \\
-UADH & UADH & 51~\% & 41~\% & non & 3 & 2 & 2 & 2 & 0 \\
-UBCI & UBCI & 47~\% & 69~\% & non & 1 & 1 & 1 & 1 & 0 \\
-UIB & UIB & 94~\% & 27~\% & oui & 2 & 1 & 1 & 1 & 0 \\
-UMED & UNIMED & 99~\% & 18~\% & oui & 4 & 1 & 1 & 1 & 0 \\
-WIFAK & WIFACK INT BANK & 69~\% & 61~\% & oui & 4 & 1 & 1 & 2 & 0 \\
-\end{longtable}}
-
-\section{Features des 75 titres}\label{ann:features}
-{\small\begin{longtable}{lrrrrrrr}
-\caption{Les 7 features des 75 titres (rendement et volatilité annualisés ; VaR et CVaR journalières à 95~\%)}\label{tab:annexe-features}\\
-\toprule Ticker & Rendement & Volatilité & Skewness & Kurtosis & VaR & CVaR & Bêta \\ \midrule \endfirsthead
-\toprule Ticker & Rendement & Volatilité & Skewness & Kurtosis & VaR & CVaR & Bêta \\ \midrule \endhead \bottomrule \endfoot
-AB & 47{,}5~\% & 16{,}9~\% & 1{,}48 & 5{,}36 & $-$1{,}12~\% & $-$1{,}74~\% & 1{,}02 \\
-AETEC & $-$18{,}2~\% & 31{,}5~\% & $-$0{,}03 & 0{,}95 & $-$3{,}92~\% & $-$4{,}36~\% & $-$0{,}05 \\
-AL & 31{,}6~\% & 19{,}4~\% & 0{,}09 & 5{,}31 & $-$1{,}70~\% & $-$3{,}20~\% & $-$0{,}02 \\
-ALKIM & $-$25{,}2~\% & 20{,}3~\% & $-$0{,}78 & 8{,}20 & $-$3{,}29~\% & $-$4{,}41~\% & 0{,}01 \\
-AMV & 23{,}6~\% & 20{,}0~\% & 0{,}98 & 4{,}89 & $-$1{,}75~\% & $-$2{,}58~\% & 0{,}62 \\
-ARTES & 26{,}2~\% & 24{,}3~\% & 0{,}56 & 3{,}73 & $-$1{,}99~\% & $-$3{,}21~\% & 0{,}52 \\
-ASSAD & 23{,}9~\% & 39{,}0~\% & 0{,}06 & $-$0{,}46 & $-$4{,}31~\% & $-$4{,}50~\% & 0{,}14 \\
-ASSMA & 19{,}8~\% & 24{,}0~\% & 0{,}39 & 4{,}43 & $-$2{,}29~\% & $-$3{,}88~\% & 0{,}47 \\
-AST & 17{,}1~\% & 23{,}3~\% & 0{,}03 & 5{,}30 & $-$2{,}26~\% & $-$4{,}27~\% & $-$0{,}05 \\
-ATB & 3{,}7~\% & 25{,}5~\% & 0{,}05 & 2{,}17 & $-$2{,}54~\% & $-$3{,}76~\% & 0{,}68 \\
-ATL & 46{,}9~\% & 23{,}1~\% & 0{,}83 & 3{,}69 & $-$1{,}90~\% & $-$2{,}88~\% & 0{,}80 \\
-BH & 3{,}0~\% & 28{,}4~\% & 0{,}22 & 2{,}37 & $-$2{,}93~\% & $-$4{,}20~\% & 1{,}11 \\
-BHASS & 13{,}7~\% & 14{,}6~\% & 1{,}02 & 18{,}92 & 0{,}00~\% & $-$0{,}08~\% & 0{,}11 \\
-BHL & 21{,}5~\% & 41{,}2~\% & $-$0{,}10 & $-$0{,}03 & $-$4{,}50~\% & $-$5{,}09~\% & 0{,}14 \\
-BIAT & 25{,}5~\% & 15{,}9~\% & 0{,}54 & 6{,}36 & $-$1{,}19~\% & $-$2{,}14~\% & 1{,}41 \\
-BL & 8{,}3~\% & 26{,}5~\% & 0{,}02 & 2{,}80 & $-$4{,}15~\% & $-$4{,}35~\% & 0{,}03 \\
-BNA & 30{,}7~\% & 23{,}6~\% & 0{,}69 & 3{,}85 & $-$1{,}95~\% & $-$2{,}96~\% & 1{,}56 \\
-BNASS & 20{,}0~\% & 29{,}1~\% & 0{,}20 & 0{,}20 & $-$2{,}88~\% & $-$3{,}27~\% & 0{,}66 \\
-BT & 19{,}4~\% & 16{,}0~\% & 0{,}65 & 6{,}15 & $-$1{,}32~\% & $-$2{,}12~\% & 1{,}01 \\
-BTE & $-$3{,}3~\% & 40{,}1~\% & $-$0{,}10 & $-$0{,}33 & $-$4{,}52~\% & $-$4{,}55~\% & 0{,}36 \\
-CC & $-$1{,}0~\% & 18{,}5~\% & 0{,}79 & 2{,}57 & $-$1{,}58~\% & $-$2{,}19~\% & 0{,}58 \\
-CELL & $-$22{,}9~\% & 38{,}3~\% & $-$0{,}13 & $-$0{,}20 & $-$4{,}41~\% & $-$4{,}81~\% & $-$0{,}08 \\
-CIL & 36{,}2~\% & 27{,}9~\% & 0{,}13 & 1{,}85 & $-$3{,}18~\% & $-$4{,}22~\% & 0{,}56 \\
-CITY & 22{,}6~\% & 21{,}9~\% & 0{,}52 & 3{,}82 & $-$2{,}04~\% & $-$3{,}00~\% & 0{,}42 \\
-DH & 32{,}1~\% & 21{,}6~\% & 0{,}54 & 2{,}79 & $-$1{,}95~\% & $-$2{,}73~\% & 0{,}84 \\
-ECYCL & $-$18{,}7~\% & 26{,}5~\% & 0{,}30 & 2{,}65 & $-$2{,}55~\% & $-$3{,}87~\% & 0{,}49 \\
-HL & 29{,}4~\% & 22{,}6~\% & 0{,}03 & 4{,}74 & $-$1{,}98~\% & $-$3{,}93~\% & 0{,}24 \\
-ICF & 16{,}0~\% & 28{,}0~\% & 0{,}33 & 2{,}83 & $-$2{,}59~\% & $-$3{,}95~\% & 0{,}32 \\
-LNDOR & 23{,}6~\% & 26{,}1~\% & 0{,}39 & 3{,}14 & $-$2{,}39~\% & $-$3{,}62~\% & 0{,}57 \\
-MAG & 3{,}9~\% & 28{,}9~\% & $-$0{,}05 & 2{,}22 & $-$4{,}45~\% & $-$4{,}54~\% & $-$0{,}12 \\
-MGR & 45{,}1~\% & 23{,}1~\% & 1{,}01 & 4{,}02 & $-$2{,}01~\% & $-$2{,}82~\% & 0{,}26 \\
-MNP & 21{,}1~\% & 34{,}2~\% & $-$0{,}06 & 0{,}88 & $-$4{,}40~\% & $-$4{,}76~\% & 0{,}48 \\
-MPBS & 43{,}1~\% & 30{,}2~\% & 0{,}40 & 2{,}34 & $-$2{,}77~\% & $-$4{,}23~\% & 0{,}40 \\
-NAKL & 15{,}3~\% & 24{,}0~\% & 0{,}50 & 4{,}13 & $-$2{,}16~\% & $-$3{,}42~\% & 0{,}38 \\
-NBL & $-$14{,}5~\% & 24{,}8~\% & $-$0{,}31 & 4{,}39 & $-$2{,}61~\% & $-$4{,}34~\% & 0{,}32 \\
-OTH & 13{,}7~\% & 18{,}0~\% & 0{,}77 & 3{,}77 & $-$1{,}56~\% & $-$2{,}25~\% & 0{,}63 \\
-PGH & 33{,}9~\% & 22{,}6~\% & 0{,}61 & 3{,}64 & $-$1{,}97~\% & $-$3{,}03~\% & 0{,}70 \\
-PLAST & 0{,}0~\% & 39{,}7~\% & $-$0{,}08 & $-$0{,}37 & $-$4{,}37~\% & $-$4{,}66~\% & 0{,}01 \\
-PLTU & 4{,}8~\% & 4{,}8~\% & 11{,}73 & 164{,}31 & 0{,}00~\% & $-$0{,}00~\% & $-$0{,}00 \\
-SAH & 13{,}0~\% & 16{,}0~\% & 0{,}74 & 3{,}61 & $-$1{,}40~\% & $-$1{,}91~\% & 0{,}69 \\
-SAM & 29{,}3~\% & 22{,}3~\% & 0{,}57 & 3{,}80 & $-$1{,}91~\% & $-$2{,}98~\% & 0{,}37 \\
-SCB & $-$26{,}4~\% & 38{,}5~\% & $-$0{,}02 & $-$0{,}65 & $-$4{,}17~\% & $-$4{,}32~\% & 0{,}14 \\
-SFBT & 8{,}8~\% & 16{,}8~\% & 0{,}97 & 4{,}87 & $-$1{,}46~\% & $-$2{,}14~\% & 0{,}82 \\
-SIAME & 0{,}7~\% & 28{,}4~\% & 0{,}18 & 2{,}70 & $-$2{,}90~\% & $-$4{,}18~\% & 0{,}40 \\
-SIMPA & 1{,}5~\% & 7{,}6~\% & 1{,}28 & 68{,}76 & 0{,}00~\% & $-$0{,}03~\% & 0{,}08 \\
-SIPHA & $-$3{,}8~\% & 30{,}3~\% & $-$0{,}22 & 1{,}90 & $-$4{,}47~\% & $-$4{,}54~\% & 0{,}11 \\
-SITS & 11{,}2~\% & 25{,}3~\% & 0{,}02 & 3{,}83 & $-$4{,}12~\% & $-$4{,}39~\% & 0{,}11 \\
-SMART & 25{,}7~\% & 24{,}0~\% & 0{,}85 & 2{,}73 & $-$2{,}06~\% & $-$3{,}05~\% & 0{,}35 \\
-SMD & $-$39{,}1~\% & 37{,}2~\% & $-$0{,}06 & $-$0{,}24 & $-$4{,}30~\% & $-$4{,}44~\% & 0{,}16 \\
-SOKNA & 23{,}6~\% & 38{,}2~\% & $-$0{,}04 & $-$0{,}15 & $-$4{,}26~\% & $-$4{,}59~\% & 0{,}40 \\
-SOMOC & $-$3{,}9~\% & 33{,}9~\% & $-$0{,}07 & 0{,}05 & $-$4{,}08~\% & $-$4{,}54~\% & $-$0{,}02 \\
-SOTEM & $-$8{,}4~\% & 39{,}2~\% & $-$0{,}09 & $-$0{,}03 & $-$4{,}46~\% & $-$4{,}53~\% & 0{,}16 \\
-SOTET & 59{,}4~\% & 32{,}1~\% & 0{,}42 & 1{,}36 & $-$2{,}79~\% & $-$4{,}03~\% & 0{,}95 \\
-SOTUV & 28{,}2~\% & 21{,}8~\% & 0{,}91 & 4{,}93 & $-$1{,}68~\% & $-$2{,}64~\% & 0{,}75 \\
-SPDIT & 28{,}3~\% & 22{,}4~\% & 0{,}13 & 3{,}88 & $-$2{,}23~\% & $-$3{,}61~\% & 0{,}32 \\
-STA & 45{,}9~\% & 29{,}7~\% & 0{,}20 & 2{,}82 & $-$2{,}60~\% & $-$4{,}40~\% & 0{,}32 \\
-STAR & 28{,}5~\% & 22{,}3~\% & 0{,}15 & 4{,}52 & $-$1{,}80~\% & $-$3{,}56~\% & 0{,}94 \\
-STB & 7{,}7~\% & 28{,}0~\% & 0{,}37 & 2{,}56 & $-$2{,}70~\% & $-$3{,}94~\% & 1{,}08 \\
-STIP & 16{,}9~\% & 40{,}8~\% & $-$0{,}09 & $-$0{,}25 & $-$4{,}54~\% & $-$4{,}58~\% & 0{,}20 \\
-STPAP & $-$21{,}9~\% & 28{,}7~\% & 0{,}13 & 2{,}28 & $-$3{,}01~\% & $-$4{,}31~\% & 0{,}27 \\
-STPIL & 27{,}0~\% & 23{,}3~\% & 0{,}58 & 3{,}64 & $-$2{,}02~\% & $-$3{,}12~\% & 0{,}41 \\
-TAIR & $-$8{,}7~\% & 28{,}6~\% & 0{,}00 & $-$0{,}53 & $-$2{,}90~\% & $-$3{,}14~\% & $-$0{,}19 \\
-TGH & 5{,}4~\% & 38{,}7~\% & $-$0{,}04 & $-$0{,}57 & $-$4{,}09~\% & $-$4{,}69~\% & 0{,}09 \\
-TINV & 48{,}9~\% & 29{,}5~\% & 0{,}15 & 1{,}81 & $-$4{,}05~\% & $-$4{,}48~\% & 0{,}04 \\
-TJARI & 32{,}1~\% & 19{,}7~\% & 0{,}54 & 3{,}96 & $-$1{,}60~\% & $-$2{,}56~\% & 1{,}53 \\
-TJL & 36{,}8~\% & 22{,}1~\% & 0{,}82 & 4{,}68 & $-$2{,}01~\% & $-$2{,}89~\% & 0{,}40 \\
-TLNET & 17{,}2~\% & 25{,}8~\% & 0{,}53 & 2{,}99 & $-$2{,}24~\% & $-$3{,}43~\% & 0{,}65 \\
-TLS & 41{,}7~\% & 26{,}2~\% & 0{,}45 & 2{,}27 & $-$2{,}40~\% & $-$3{,}44~\% & 0{,}60 \\
-TPR & 34{,}4~\% & 22{,}2~\% & 0{,}64 & 2{,}76 & $-$1{,}88~\% & $-$2{,}67~\% & 0{,}95 \\
-TRE & 22{,}2~\% & 24{,}3~\% & 0{,}16 & 2{,}70 & $-$2{,}53~\% & $-$3{,}81~\% & 0{,}29 \\
-UADH & 2{,}6~\% & 40{,}7~\% & $-$0{,}05 & $-$0{,}95 & $-$4{,}01~\% & $-$4{,}29~\% & 0{,}04 \\
-UBCI & 20{,}6~\% & 23{,}2~\% & 0{,}26 & 4{,}68 & $-$2{,}21~\% & $-$3{,}93~\% & 0{,}41 \\
-UIB & 13{,}5~\% & 22{,}3~\% & 0{,}35 & 3{,}61 & $-$1{,}98~\% & $-$3{,}15~\% & 0{,}62 \\
-UMED & 10{,}3~\% & 19{,}7~\% & 0{,}35 & 4{,}08 & $-$1{,}82~\% & $-$2{,}74~\% & 0{,}58 \\
-WIFAK & $-$1{,}5~\% & 18{,}6~\% & 0{,}04 & 7{,}36 & $-$1{,}97~\% & $-$3{,}24~\% & $-$0{,}15 \\
-\end{longtable}}
-
-\section{Critères de choix de \texorpdfstring{$k$}{k}}\label{ann:criteres}
-\begin{table}[H]\centering\small
-\caption{Critères de choix de $k$, 75 titres (S4)}\label{tab:annexe-k75}
-\begin{tabular}{llrrrrl}\toprule
-Espace & $k$ & Inertie & Silhouette & CH & DB & Tailles \\ \midrule
-RV & 3 & 58{,}0 & 0{,}407 & 57{,}2 & 0{,}820 & 37 / 26 / 12 \\
-RV & 4 & 42{,}5 & 0{,}421 & 59{,}8 & 0{,}839 & 37 / 17 / 11 / 10 \\
-RV & 5 & 32{,}7 & 0{,}383 & 62{,}8 & 0{,}802 & 26 / 17 / 11 / 11 / 10 \\
-RV & 6 & 26{,}0 & 0{,}401 & 65{,}8 & 0{,}734 & 22 / 13 / 11 / 11 / 10 / 8 \\
-RV & 7 & 21{,}0 & 0{,}413 & 69{,}5 & 0{,}667 & 21 / 15 / 11 / 10 / 8 / 7 / 3 \\
-RV & 8 & 17{,}5 & 0{,}441 & 72{,}6 & 0{,}626 & 22 / 13 / 11 / 9 / 8 / 7 / 3 / 2 \\
-\midrule
-7F & 3 & 203{,}3 & 0{,}406 & 57{,}0 & 0{,}657 & 48 / 26 / 1 \\
-7F & 4 & 158{,}1 & 0{,}314 & 54{,}9 & 0{,}904 & 33 / 25 / 16 / 1 \\
-7F & 5 & 127{,}7 & 0{,}309 & 54{,}5 & 0{,}829 & 30 / 25 / 17 / 2 / 1 \\
-7F & 6 & 107{,}0 & 0{,}288 & 53{,}9 & 0{,}912 & 29 / 16 / 16 / 11 / 2 / 1 \\
-7F & 7 & 94{,}6 & 0{,}274 & 51{,}6 & 0{,}922 & 25 / 16 / 15 / 10 / 6 / 2 / 1 \\
-7F & 8 & 82{,}4 & 0{,}283 & 51{,}4 & 0{,}902 & 21 / 16 / 12 / 10 / 7 / 6 / 2 / 1 \\
-\midrule
-ACP & 3 & 148{,}2 & 0{,}469 & 77{,}4 & 0{,}550 & 47 / 27 / 1 \\
-ACP & 4 & 108{,}6 & 0{,}412 & 78{,}1 & 0{,}730 & 38 / 26 / 10 / 1 \\
-ACP & 5 & 85{,}2 & 0{,}370 & 78{,}4 & 0{,}702 & 32 / 23 / 17 / 2 / 1 \\
-ACP & 6 & 65{,}1 & 0{,}367 & 85{,}2 & 0{,}750 & 28 / 18 / 17 / 9 / 2 / 1 \\
-ACP & 7 & 53{,}1 & 0{,}373 & 88{,}3 & 0{,}708 & 27 / 17 / 14 / 8 / 6 / 2 / 1 \\
-ACP & 8 & 43{,}6 & 0{,}382 & 92{,}9 & 0{,}694 & 23 / 16 / 14 / 8 / 6 / 5 / 2 / 1 \\
-\bottomrule\end{tabular}\end{table}
-\begin{table}[H]\centering\small
-\caption{Critères de choix de $k$, 57 titres liquides (S4)}\label{tab:annexe-k57}
-\begin{tabular}{llrrrrl}\toprule
-Espace & $k$ & Inertie & Silhouette & CH & DB & Tailles \\ \midrule
-RV & 3 & 41{,}4 & 0{,}394 & 47{,}3 & 0{,}912 & 29 / 18 / 10 \\
-RV & 4 & 30{,}7 & 0{,}379 & 47{,}9 & 0{,}862 & 28 / 11 / 11 / 7 \\
-RV & 5 & 23{,}8 & 0{,}406 & 49{,}4 & 0{,}839 & 23 / 11 / 9 / 7 / 7 \\
-RV & 6 & 18{,}0 & 0{,}425 & 54{,}5 & 0{,}776 & 23 / 9 / 8 / 7 / 6 / 4 \\
-RV & 7 & 13{,}9 & 0{,}427 & 60{,}1 & 0{,}703 & 18 / 9 / 9 / 7 / 5 / 5 / 4 \\
-RV & 8 & 11{,}7 & 0{,}465 & 61{,}1 & 0{,}623 & 19 / 9 / 8 / 7 / 4 / 4 / 4 / 2 \\
-\midrule
-7F & 3 & 151{,}6 & 0{,}314 & 44{,}1 & 1{,}135 & 23 / 23 / 11 \\
-7F & 4 & 127{,}5 & 0{,}260 & 37{,}6 & 1{,}288 & 18 / 14 / 14 / 11 \\
-7F & 5 & 108{,}6 & 0{,}265 & 34{,}7 & 1{,}201 & 17 / 13 / 11 / 10 / 6 \\
-7F & 6 & 96{,}1 & 0{,}280 & 32{,}1 & 1{,}130 & 16 / 11 / 10 / 10 / 8 / 2 \\
-7F & 7 & 85{,}4 & 0{,}300 & 30{,}6 & 1{,}033 & 16 / 11 / 10 / 8 / 7 / 3 / 2 \\
-7F & 8 & 76{,}4 & 0{,}278 & 29{,}5 & 1{,}077 & 13 / 11 / 10 / 8 / 5 / 5 / 3 / 2 \\
-\midrule
-ACP & 3 & 88{,}8 & 0{,}427 & 72{,}9 & 0{,}840 & 26 / 21 / 10 \\
-ACP & 4 & 65{,}9 & 0{,}428 & 70{,}4 & 0{,}761 & 26 / 15 / 10 / 6 \\
-ACP & 5 & 49{,}3 & 0{,}392 & 73{,}7 & 0{,}805 & 15 / 14 / 11 / 10 / 7 \\
-ACP & 6 & 40{,}3 & 0{,}424 & 72{,}9 & 0{,}754 & 13 / 11 / 10 / 9 / 7 / 7 \\
-ACP & 7 & 34{,}4 & 0{,}404 & 71{,}3 & 0{,}739 & 13 / 11 / 9 / 7 / 7 / 6 / 4 \\
-ACP & 8 & 28{,}9 & 0{,}391 & 72{,}5 & 0{,}746 & 13 / 8 / 8 / 7 / 6 / 6 / 5 / 4 \\
-\bottomrule\end{tabular}\end{table}
-\begin{table}[H]\centering\small
-\caption{Critères de choix de $k$, 5 features (S4b) : 75 titres et 57 liquides}\label{tab:annexe-k5f}
-\begin{tabular}{llrrrrl}\toprule
-Espace & $k$ & Inertie & Silhouette & CH & DB & Tailles \\ \midrule
-5F & 3 & 167{,}6 & 0{,}365 & 44{,}5 & 0{,}735 & 46 / 28 / 1 \\
-5F & 4 & 130{,}5 & 0{,}293 & 44{,}3 & 0{,}935 & 31 / 27 / 16 / 1 \\
-5F & 5 & 109{,}8 & 0{,}296 & 42{,}3 & 0{,}835 & 28 / 24 / 20 / 2 / 1 \\
-5F & 6 & 91{,}1 & 0{,}293 & 43{,}0 & 0{,}882 & 27 / 19 / 16 / 10 / 2 / 1 \\
-5F & 7 & 80{,}2 & 0{,}278 & 41{,}6 & 0{,}928 & 26 / 14 / 13 / 11 / 8 / 2 / 1 \\
-5F & 8 & 70{,}5 & 0{,}273 & 41{,}3 & 0{,}932 & 22 / 12 / 10 / 10 / 10 / 8 / 2 / 1 \\
-\midrule
-5F (57) & 3 & 117{,}2 & 0{,}286 & 38{,}6 & 1{,}185 & 24 / 18 / 15 \\
-5F (57) & 4 & 99{,}8 & 0{,}278 & 32{,}8 & 1{,}167 & 22 / 18 / 10 / 7 \\
-5F (57) & 5 & 85{,}8 & 0{,}233 & 30{,}2 & 1{,}225 & 14 / 13 / 13 / 10 / 7 \\
-5F (57) & 6 & 76{,}3 & 0{,}269 & 27{,}9 & 1{,}068 & 18 / 15 / 10 / 6 / 5 / 3 \\
-5F (57) & 7 & 67{,}3 & 0{,}284 & 26{,}9 & 1{,}071 & 15 / 11 / 10 / 8 / 7 / 3 / 3 \\
-5F (57) & 8 & 58{,}3 & 0{,}278 & 27{,}2 & 1{,}051 & 13 / 10 / 8 / 7 / 6 / 5 / 5 / 3 \\
-\bottomrule\end{tabular}\end{table}
-
-\section{Stabilité des anomalies}\label{ann:stabilite}
-\begin{table}[H]\centering\small
-\caption{Titres signalés par Isolation Forest, 75 titres (S4)}\label{tab:annexe-if75}
-\begin{tabular}{llrp{9cm}}\toprule
-Espace & Taux & Signalés & Titres \\ \midrule
-RV & 3\% & 3 & PLTU, SMD, SOTET \\
-RV & 5\% & 4 & PLTU, SIMPA, SMD, SOTET \\
-RV & 8\% & 6 & AB, ALKIM, PLTU, SIMPA, SMD, SOTET \\
-RV & 10\% & 8 & AB, ALKIM, BHL, PLTU, SCB, SIMPA, SMD, SOTET \\
-7F & 3\% & 3 & BHASS, PLTU, SIMPA \\
-7F & 5\% & 4 & AB, BHASS, PLTU, SIMPA \\
-7F & 8\% & 6 & AB, ALKIM, BHASS, PLTU, SIMPA, SOTET \\
-7F & 10\% & 8 & AB, ALKIM, BHASS, BIAT, PLTU, SIMPA, SOTET, TAIR \\
-ACP & 3\% & 3 & PLTU, SIMPA, SOTET \\
-ACP & 5\% & 4 & BHASS, PLTU, SIMPA, SOTET \\
-ACP & 8\% & 6 & ALKIM, BHASS, CELL, PLTU, SIMPA, SOTET \\
-ACP & 10\% & 8 & AB, ALKIM, BHASS, CELL, PLTU, SIMPA, SMD, SOTET \\
-\bottomrule\end{tabular}\end{table}
-\begin{table}[H]\centering\small
-\caption{Titres signalés par Isolation Forest, 57 titres liquides (S4)}\label{tab:annexe-if57}
-\begin{tabular}{llrp{9cm}}\toprule
-Espace & Taux & Signalés & Titres \\ \midrule
-RV & 3\% & 2 & SCB, SOTET \\
-RV & 5\% & 3 & BHL, SCB, SOTET \\
-RV & 8\% & 5 & AB, BHL, CELL, SCB, SOTET \\
-RV & 10\% & 6 & AB, BHL, BTE, CELL, SCB, SOTET \\
-7F & 3\% & 2 & AB, WIFAK \\
-7F & 5\% & 3 & AB, BIAT, WIFAK \\
-7F & 8\% & 5 & AB, BHL, BIAT, TAIR, WIFAK \\
-7F & 10\% & 6 & AB, BHL, BIAT, CELL, TAIR, WIFAK \\
-ACP & 3\% & 2 & SOTET, WIFAK \\
-ACP & 5\% & 3 & AB, SOTET, WIFAK \\
-ACP & 8\% & 5 & AB, CELL, NBL, SOTET, WIFAK \\
-ACP & 10\% & 6 & AB, BHL, CELL, NBL, SOTET, WIFAK \\
-\bottomrule\end{tabular}\end{table}
-\begin{table}[H]\centering\small
-\caption{Titres signalés par Isolation Forest, 5 features, 75 titres (S4b)}\label{tab:annexe-if5f}
-\begin{tabular}{lrp{9cm}}\toprule
-Taux & Signalés & Titres \\ \midrule
-3\% & 3 & AB, SIMPA, PLTU \\
-5\% & 4 & AB, SIMPA, BHASS, PLTU \\
-8\% & 6 & AB, SOTET, ALKIM, SIMPA, BHASS, PLTU \\
-10\% & 8 & BIAT, AB, SOTET, CELL, ALKIM, SIMPA, BHASS, PLTU \\
-\bottomrule\end{tabular}\end{table}
-\begin{table}[H]\centering\small
-\caption{Titres signalés par Isolation Forest, 5 features, 57 titres liquides (S4b)}\label{tab:annexe-if5f57}
-\begin{tabular}{lrp{9cm}}\toprule
-Taux & Signalés & Titres \\ \midrule
-3\% & 2 & AB, CELL \\
-5\% & 3 & AB, SOTET, CELL \\
-8\% & 5 & AB, SOTET, NBL, BHL, CELL \\
-10\% & 6 & AB, SOTET, TAIR, NBL, BHL, CELL \\
-\bottomrule\end{tabular}\end{table}
-
-\begin{figure}[H]\centering
-\includegraphics[width=\linewidth]{s4_scores_isolation_forest_liquides.png}
-\caption{Scores Isolation Forest sur les 57 titres liquides.}
-\end{figure}
-\begin{figure}[H]\centering
-\includegraphics[width=0.9\linewidth]{s4b_scores_isolation_forest.png}
-\caption{Scores Isolation Forest avec 5 features, 75 titres.}
-\end{figure}
-
-\section{Poids des portefeuilles de Markowitz}\label{ann:poids}
-\begin{table}[H]\centering\small\caption{Poids des portefeuilles de Markowitz (75 titres, sans vente à découvert)}\label{tab:annexe-poids}
-\begin{tabular}{lr@{\hspace{1.2cm}}lr@{\hspace{1.2cm}}lrr}\toprule
-\multicolumn{4}{c}{Sharpe maximal (33 titres $>$ 0,1~\%)} & \multicolumn{3}{c}{Variance minimale (15 premiers)}\\ \cmidrule(r){1-4}\cmidrule(l){5-7}
-Titre & Poids & Titre & Poids & Titre & $w \geq 0$ & forme fermée \\ \midrule
-AB & 10{,}3~\% & CIL & 2{,}7~\% & PLTU & 36{,}9~\% & 36{,}8~\% \\
-AL & 7{,}6~\% & ARTES & 1{,}7~\% & SIMPA & 14{,}3~\% & 14{,}5~\% \\
-MGR & 7{,}0~\% & BHASS & 1{,}6~\% & BHASS & 3{,}3~\% & 3{,}4~\% \\
-TINV & 6{,}8~\% & STIP & 1{,}4~\% & WIFAK & 2{,}7~\% & 2{,}7~\% \\
-TJL & 5{,}9~\% & UBCI & 1{,}3~\% & AL & 1{,}8~\% & 1{,}9~\% \\
-ATL & 5{,}7~\% & SOTUV & 1{,}2~\% & HL & 1{,}7~\% & 1{,}7~\% \\
-TLS & 4{,}9~\% & ASSAD & 0{,}9~\% & SFBT & 1{,}6~\% & 1{,}8~\% \\
-HL & 4{,}7~\% & STPIL & 0{,}9~\% & CC & 1{,}5~\% & 1{,}6~\% \\
-SPDIT & 4{,}1~\% & TJARI & 0{,}8~\% & ALKIM & 1{,}5~\% & 1{,}5~\% \\
-PGH & 3{,}7~\% & LNDOR & 0{,}7~\% & SPDIT & 1{,}5~\% & 1{,}6~\% \\
-SOTET & 3{,}6~\% & TRE & 0{,}7~\% & SAH & 1{,}5~\% & 1{,}6~\% \\
-AST & 3{,}6~\% & TPR & 0{,}5~\% & AST & 1{,}4~\% & 1{,}4~\% \\
-STA & 3{,}6~\% & BNASS & 0{,}5~\% & UBCI & 1{,}3~\% & 1{,}4~\% \\
-SAM & 3{,}5~\% & CITY & 0{,}4~\% & MGR & 1{,}3~\% & 1{,}3~\% \\
-MPBS & 3{,}3~\% & MAG & 0{,}3~\% & TAIR & 1{,}2~\% & 1{,}2~\% \\
-SMART & 3{,}1~\% & BL & 0{,}1~\% &  & &  \\
-DH & 2{,}7~\% &  &  &  & &  \\
-\bottomrule\end{tabular}\end{table}
-
 \end{document}
