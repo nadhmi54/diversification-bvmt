@@ -1,0 +1,9 @@
+ticker,nom,nb_signalements_sur_4,stable,rendement,volatilite,part_seances_echangees,nature,justification
+AB,AMEN BANK,4,True,0.475152900930555,0.1687358234875808,0.9927,atypique modéré,"liquide (99%) ; aucune feature à |z| > 2, isolé par une combinaison de features"
+SIMPA,SIMPAR,4,True,0.0152406998571906,0.0764659182026859,0.1177,artefact d'illiquidité,"échangé 12% des séances, 97% de rendements nuls ; extrêmes : volatilité −2.4σ, CVaR +3.2σ"
+PLTU,PLAC. TSIE-SICAF,4,True,0.0476664339846892,0.0480561258454801,0.0396,artefact d'illiquidité,"échangé 4% des séances, 98% de rendements nuls ; extrêmes : volatilité −2.8σ, skewness +8.2σ, CVaR +3.2σ"
+BHASS,BH ASSURANCE,3,True,0.1374065290722588,0.1459391331939718,0.0958,artefact d'illiquidité,"échangé 10% des séances, 94% de rendements nuls ; extrêmes : CVaR +3.2σ"
+SOTET,SOTETEL,2,False,0.5943700383890542,0.3212245336778935,0.9875,performance extrême (hausse),liquide (99%) ; extrêmes : rendement +2.2σ
+ALKIM,ALKIMIA,2,False,-0.2522873048406696,0.2025565665717751,0.1833,artefact d'illiquidité,"échangé 18% des séances, 86% de rendements nuls ; extrêmes : rendement −2.0σ"
+CELL,CELLCOM,1,False,-0.2294326143089197,0.3827935834805364,0.6937,atypique modéré,"liquide (69%) ; aucune feature à |z| > 2, isolé par une combinaison de features"
+BIAT,BIAT,1,False,0.2552850112398326,0.1585283519248466,1.0,performance extrême,liquide (100%) ; extrêmes : bêta +2.5σ

@@ -1,0 +1,3 @@
+paire,pearson,spearman,corr_moy_skewness,corr_moy_kurtosis,retiree,gardee,corr_moy_VaR,corr_moy_CVaR
+skewness / kurtosis,0.9242086419789974,0.5807681365576103,0.33047373543514685,0.33861804866841605,kurtosis,skewness,,
+VaR / CVaR,0.8935830742066676,0.9459369115836355,,,VaR,CVaR,0.5213286288268045,0.5077728466938408

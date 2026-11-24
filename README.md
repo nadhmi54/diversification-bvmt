@@ -15,17 +15,19 @@ uniquement à partir de **sources officielles** de la Bourse (archives annuelles
 | S2 | Collecte, nettoyage, opérations sur titres, filtres, note qualité | `src/`, `data/processed/`, `reports/note_qualite_donnees.md` |
 | S3 | 7 features par titre, covariance, Markowitz (variance minimale, Sharpe maximal, frontière) | `notebooks/S3_features_markowitz.ipynb`, `data/s3/`, `reports/S3_Features_Markowitz_BVMT.pdf` |
 | S4 | Standardisation, ACP, k-means (3 espaces), Isolation Forest, interprétation, comparaison 75 / 57 titres | `notebooks/S4_segmentation_anomalies.ipynb`, `data/processed/s4/` |
+| S4b | Même démarche avec 5 features (kurtosis et VaR retirés : corrélations 0,92 et 0,89 avec skewness et CVaR) ; comparaison avec la S4 | `notebooks/S4b_segmentation_5_features.ipynb`, `data/processed/s4_5f/` |
+| S3 + S4 | Les trois notebooks réunis en un seul, dans l'ordre d'exécution (résultats identiques) | `notebooks/S3_S4_complet.ipynb` |
 
 ## Structure
 
 ```
 src/                     scripts de la S2 (collecte, extraction des bulletins PDF, construction du jeu de données)
-notebooks/               S3 et S4, exécutables de bout en bout (chemins relatifs, graine fixe)
+notebooks/               S3, S4, S4b et le notebook réuni S3_S4_complet, exécutables de bout en bout (chemins relatifs, graine fixe)
 data/raw/                données brutes — NON versionnées (voir ci-dessous), sauf manifeste_bulletins.csv
 data/interim/            extractions intermédiaires des bulletins 2026
-data/processed/          jeu de données de la S2 ; sorties de la S4 dans data/processed/s4/
+data/processed/          jeu de données de la S2 ; sorties de la S4 dans data/processed/s4/, de la S4b dans data/processed/s4_5f/
 data/s3/                 sorties de la S3
-reports/                 note qualité (S2) et rapport PDF de la S3
+reports/                 note qualité (S2), rapport PDF de la S3, présentation, texte de présentation, explications frontière et choix de k
 ```
 
 ## Reproduire
@@ -42,6 +44,10 @@ python src/build_dataset.py                               # -> data/processed/*
 # S3 et S4 — à lancer depuis le dossier notebooks/
 jupyter nbconvert --to notebook --execute --inplace notebooks/S3_features_markowitz.ipynb
 jupyter nbconvert --to notebook --execute --inplace notebooks/S4_segmentation_anomalies.ipynb
+jupyter nbconvert --to notebook --execute --inplace notebooks/S4b_segmentation_5_features.ipynb
+
+# ou tout d'un coup (S3 + S4 + S4b)
+jupyter nbconvert --to notebook --execute --inplace notebooks/S3_S4_complet.ipynb
 ```
 
 `src/unpack_bulletins.py` ne sert que pour les paquets `.bin` produits par la collecte initiale faite depuis un navigateur.
